@@ -1,0 +1,4102 @@
+[
+{
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+        "name": "Can add log entry",
+        "content_type": 1,
+        "codename": "add_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+        "name": "Can change log entry",
+        "content_type": 1,
+        "codename": "change_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+        "name": "Can delete log entry",
+        "content_type": 1,
+        "codename": "delete_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+        "name": "Can view log entry",
+        "content_type": 1,
+        "codename": "view_logentry"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+        "name": "Can add permission",
+        "content_type": 3,
+        "codename": "add_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+        "name": "Can change permission",
+        "content_type": 3,
+        "codename": "change_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+        "name": "Can delete permission",
+        "content_type": 3,
+        "codename": "delete_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+        "name": "Can view permission",
+        "content_type": 3,
+        "codename": "view_permission"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+        "name": "Can add group",
+        "content_type": 2,
+        "codename": "add_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+        "name": "Can change group",
+        "content_type": 2,
+        "codename": "change_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+        "name": "Can delete group",
+        "content_type": 2,
+        "codename": "delete_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+        "name": "Can view group",
+        "content_type": 2,
+        "codename": "view_group"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+        "name": "Can add user",
+        "content_type": 4,
+        "codename": "add_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+        "name": "Can change user",
+        "content_type": 4,
+        "codename": "change_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+        "name": "Can delete user",
+        "content_type": 4,
+        "codename": "delete_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+        "name": "Can view user",
+        "content_type": 4,
+        "codename": "view_user"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+        "name": "Can add content type",
+        "content_type": 5,
+        "codename": "add_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+        "name": "Can change content type",
+        "content_type": 5,
+        "codename": "change_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+        "name": "Can delete content type",
+        "content_type": 5,
+        "codename": "delete_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+        "name": "Can view content type",
+        "content_type": 5,
+        "codename": "view_contenttype"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+        "name": "Can add session",
+        "content_type": 6,
+        "codename": "add_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+        "name": "Can change session",
+        "content_type": 6,
+        "codename": "change_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+        "name": "Can delete session",
+        "content_type": 6,
+        "codename": "delete_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+        "name": "Can view session",
+        "content_type": 6,
+        "codename": "view_session"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+        "name": "Can add descuento",
+        "content_type": 8,
+        "codename": "add_descuento"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+        "name": "Can change descuento",
+        "content_type": 8,
+        "codename": "change_descuento"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+        "name": "Can delete descuento",
+        "content_type": 8,
+        "codename": "delete_descuento"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+        "name": "Can view descuento",
+        "content_type": 8,
+        "codename": "view_descuento"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+        "name": "Can add reporta",
+        "content_type": 16,
+        "codename": "add_reporta"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+        "name": "Can change reporta",
+        "content_type": 16,
+        "codename": "change_reporta"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+        "name": "Can delete reporta",
+        "content_type": 16,
+        "codename": "delete_reporta"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+        "name": "Can view reporta",
+        "content_type": 16,
+        "codename": "view_reporta"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+        "name": "Can add polideportivo",
+        "content_type": 13,
+        "codename": "add_polideportivo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+        "name": "Can change polideportivo",
+        "content_type": 13,
+        "codename": "change_polideportivo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+        "name": "Can delete polideportivo",
+        "content_type": 13,
+        "codename": "delete_polideportivo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+        "name": "Can view polideportivo",
+        "content_type": 13,
+        "codename": "view_polideportivo"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+        "name": "Can add direccion",
+        "content_type": 9,
+        "codename": "add_direccion"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+        "name": "Can change direccion",
+        "content_type": 9,
+        "codename": "change_direccion"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+        "name": "Can delete direccion",
+        "content_type": 9,
+        "codename": "delete_direccion"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+        "name": "Can view direccion",
+        "content_type": 9,
+        "codename": "view_direccion"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+        "name": "Can add registra",
+        "content_type": 15,
+        "codename": "add_registra"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+        "name": "Can change registra",
+        "content_type": 15,
+        "codename": "change_registra"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+        "name": "Can delete registra",
+        "content_type": 15,
+        "codename": "delete_registra"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+        "name": "Can view registra",
+        "content_type": 15,
+        "codename": "view_registra"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+        "name": "Can add pista",
+        "content_type": 12,
+        "codename": "add_pista"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+        "name": "Can change pista",
+        "content_type": 12,
+        "codename": "change_pista"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+        "name": "Can delete pista",
+        "content_type": 12,
+        "codename": "delete_pista"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+        "name": "Can view pista",
+        "content_type": 12,
+        "codename": "view_pista"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+        "name": "Can add resuelve",
+        "content_type": 17,
+        "codename": "add_resuelve"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+        "name": "Can change resuelve",
+        "content_type": 17,
+        "codename": "change_resuelve"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+        "name": "Can delete resuelve",
+        "content_type": 17,
+        "codename": "delete_resuelve"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+        "name": "Can view resuelve",
+        "content_type": 17,
+        "codename": "view_resuelve"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+        "name": "Can add incidencia",
+        "content_type": 10,
+        "codename": "add_incidencia"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+        "name": "Can change incidencia",
+        "content_type": 10,
+        "codename": "change_incidencia"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+        "name": "Can delete incidencia",
+        "content_type": 10,
+        "codename": "delete_incidencia"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+        "name": "Can view incidencia",
+        "content_type": 10,
+        "codename": "view_incidencia"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+        "name": "Can add sistema_ control",
+        "content_type": 18,
+        "codename": "add_sistema_control"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+        "name": "Can change sistema_ control",
+        "content_type": 18,
+        "codename": "change_sistema_control"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+        "name": "Can delete sistema_ control",
+        "content_type": 18,
+        "codename": "delete_sistema_control"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+        "name": "Can view sistema_ control",
+        "content_type": 18,
+        "codename": "view_sistema_control"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 61,
+    "fields": {
+        "name": "Can add usuario",
+        "content_type": 20,
+        "codename": "add_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 62,
+    "fields": {
+        "name": "Can change usuario",
+        "content_type": 20,
+        "codename": "change_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 63,
+    "fields": {
+        "name": "Can delete usuario",
+        "content_type": 20,
+        "codename": "delete_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 64,
+    "fields": {
+        "name": "Can view usuario",
+        "content_type": 20,
+        "codename": "view_usuario"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 65,
+    "fields": {
+        "name": "Can add notificacion",
+        "content_type": 11,
+        "codename": "add_notificacion"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 66,
+    "fields": {
+        "name": "Can change notificacion",
+        "content_type": 11,
+        "codename": "change_notificacion"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 67,
+    "fields": {
+        "name": "Can delete notificacion",
+        "content_type": 11,
+        "codename": "delete_notificacion"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 68,
+    "fields": {
+        "name": "Can view notificacion",
+        "content_type": 11,
+        "codename": "view_notificacion"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 69,
+    "fields": {
+        "name": "Can add recibe",
+        "content_type": 14,
+        "codename": "add_recibe"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 70,
+    "fields": {
+        "name": "Can change recibe",
+        "content_type": 14,
+        "codename": "change_recibe"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 71,
+    "fields": {
+        "name": "Can delete recibe",
+        "content_type": 14,
+        "codename": "delete_recibe"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 72,
+    "fields": {
+        "name": "Can view recibe",
+        "content_type": 14,
+        "codename": "view_recibe"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 73,
+    "fields": {
+        "name": "Can add trabajador",
+        "content_type": 19,
+        "codename": "add_trabajador"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 74,
+    "fields": {
+        "name": "Can change trabajador",
+        "content_type": 19,
+        "codename": "change_trabajador"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 75,
+    "fields": {
+        "name": "Can delete trabajador",
+        "content_type": 19,
+        "codename": "delete_trabajador"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 76,
+    "fields": {
+        "name": "Can view trabajador",
+        "content_type": 19,
+        "codename": "view_trabajador"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 77,
+    "fields": {
+        "name": "Can add administrador",
+        "content_type": 7,
+        "codename": "add_administrador"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 78,
+    "fields": {
+        "name": "Can change administrador",
+        "content_type": 7,
+        "codename": "change_administrador"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 79,
+    "fields": {
+        "name": "Can delete administrador",
+        "content_type": 7,
+        "codename": "delete_administrador"
+    }
+},
+{
+    "model": "auth.permission",
+    "pk": 80,
+    "fields": {
+        "name": "Can view administrador",
+        "content_type": 7,
+        "codename": "view_administrador"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+        "app_label": "admin",
+        "model": "logentry"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+        "app_label": "auth",
+        "model": "group"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+        "app_label": "auth",
+        "model": "permission"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+        "app_label": "auth",
+        "model": "user"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+        "app_label": "contenttypes",
+        "model": "contenttype"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+        "app_label": "sessions",
+        "model": "session"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "administrador"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "descuento"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "direccion"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "incidencia"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "notificacion"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "pista"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "polideportivo"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "recibe"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "registra"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 16,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "reporta"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 17,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "resuelve"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 18,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "sistema_control"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 19,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "trabajador"
+    }
+},
+{
+    "model": "contenttypes.contenttype",
+    "pk": 20,
+    "fields": {
+        "app_label": "sportHub",
+        "model": "usuario"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 1,
+    "fields": {
+        "nombreUsuario": "Collection they.",
+        "nombre": "Argue charge.",
+        "apellidos": "Song number Mr face.",
+        "correoElectronico": "Tv young up those. Local interesting hold east avoid within senior.\nWater visit gun chance feel respond compare present. Plant weight surface kitchen save back.",
+        "dni": "Arrive.",
+        "contrasenia": "Support little box behavior. Tax me meet everything appear. Theory billion baby be very compare training.",
+        "telefono": -23215,
+        "fechaAlta": "2014-09-02"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 2,
+    "fields": {
+        "nombreUsuario": "Around ago.",
+        "nombre": "Born machine deal.",
+        "apellidos": "Fear simply respond give animal.",
+        "correoElectronico": "Gas fund position student. Record him too accept. Present follow rich agree raise purpose account.\nDiscussion point enter she structure build act. Try moment anything. Follow loss reality beat.",
+        "dni": "Its.",
+        "contrasenia": "But special name he structure. Someone such perhaps staff ahead fill.",
+        "telefono": -14440,
+        "fechaAlta": "2003-12-28"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 3,
+    "fields": {
+        "nombreUsuario": "Age watch card.",
+        "nombre": "Far sister event.",
+        "apellidos": "Watch next assume husband information.",
+        "correoElectronico": "Budget leg appear common. Short environment issue tend.\nNice behavior pressure. Success culture tonight summer. They spend husband election.",
+        "dni": "Act.",
+        "contrasenia": "Thank well similar whatever size expect. Garden take southern others close difference tree. I fall bag force.",
+        "telefono": -29792,
+        "fechaAlta": "2005-02-27"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 4,
+    "fields": {
+        "nombreUsuario": "Brother daughter.",
+        "nombre": "Spring camera.",
+        "apellidos": "Week long campaign nearly base site keep other.",
+        "correoElectronico": "Fight voice anyone hotel ball may plant year. How social draw want option participant guess.\nEnter still material kind center themselves. Democratic military politics effort specific forward.",
+        "dni": "Your.",
+        "contrasenia": "Relate perhaps ever chair reason local. Find couple drug in. Agreement expert fire care improve poor.",
+        "telefono": 15051,
+        "fechaAlta": "2019-04-05"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 5,
+    "fields": {
+        "nombreUsuario": "Just million front.",
+        "nombre": "Pretty collection.",
+        "apellidos": "Front of player shoulder strong him.",
+        "correoElectronico": "Must mention modern accept far turn similar. Represent paper rate notice positive worry. Instead lot goal protect actually check yet.",
+        "dni": "Event.",
+        "contrasenia": "Sing herself may ball imagine even art. Charge administration range too number coach stand.",
+        "telefono": -17013,
+        "fechaAlta": "2023-11-23"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 6,
+    "fields": {
+        "nombreUsuario": "Action and amount.",
+        "nombre": "Include child.",
+        "apellidos": "Option through bank maintain bed by society.",
+        "correoElectronico": "Arm his institution husband. Network factor suggest police citizen something animal. Black apply way you loss.",
+        "dni": "He.",
+        "contrasenia": "Course others professor situation security. Agreement money street heart sign. Great month mother national human.",
+        "telefono": 28768,
+        "fechaAlta": "1977-06-04"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 7,
+    "fields": {
+        "nombreUsuario": "Answer gun national.",
+        "nombre": "Big carry girl.",
+        "apellidos": "Debate ready word least country.",
+        "correoElectronico": "Professional growth report early memory front. Guess actually necessary person college manage case student.",
+        "dni": "She give.",
+        "contrasenia": "Car edge doctor worry ahead. Question chance yard imagine.",
+        "telefono": -2974,
+        "fechaAlta": "1987-07-03"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 8,
+    "fields": {
+        "nombreUsuario": "Voice card four.",
+        "nombre": "Sort nothing week.",
+        "apellidos": "Matter Mrs politics high.",
+        "correoElectronico": "Avoid girl mind town. Beyond religious follow argue test country.\nYou already behavior purpose. Teach land ever although similar meeting each. Main fact produce budget green since.",
+        "dni": "Keep.",
+        "contrasenia": "Behind wish bed north bank medical entire. Early send treatment movement. Little bank yourself know live rule structure.",
+        "telefono": 5714,
+        "fechaAlta": "1980-02-23"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 9,
+    "fields": {
+        "nombreUsuario": "Oil attention.",
+        "nombre": "Responsibility.",
+        "apellidos": "Ahead public class.",
+        "correoElectronico": "Road manage support. Store style coach debate wall. Dog order prove evening address stuff know population. Watch speak city consider yes.",
+        "dni": "Report.",
+        "contrasenia": "Plant important ready read. Member happen real bank event.",
+        "telefono": 17823,
+        "fechaAlta": "1984-12-17"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 10,
+    "fields": {
+        "nombreUsuario": "Seat training.",
+        "nombre": "Artist share.",
+        "apellidos": "Animal positive short whether.",
+        "correoElectronico": "Card hospital dream present travel history society. Daughter development begin decide.\nSpecial happen process performance. Car while development. Per seven cut maintain.",
+        "dni": "His.",
+        "contrasenia": "Wind response road pull Mrs. Community do soon method professor.",
+        "telefono": 14718,
+        "fechaAlta": "1973-10-01"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 11,
+    "fields": {
+        "nombreUsuario": "Time away military.",
+        "nombre": "Might hot dog force.",
+        "apellidos": "Sport federal two plan.",
+        "correoElectronico": "Cold anyone cold local chance. Return nice catch.",
+        "dni": "Act task.",
+        "contrasenia": "Company father seat production sport can. Ready home foot worry real.",
+        "telefono": 11796,
+        "fechaAlta": "2021-01-20"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 12,
+    "fields": {
+        "nombreUsuario": "Close example.",
+        "nombre": "Receive sing behind.",
+        "apellidos": "Film weight enough cup cultural.",
+        "correoElectronico": "Both stay resource. Federal Republican despite allow tell hit teacher. Collection still no community.",
+        "dni": "Some.",
+        "contrasenia": "Suddenly task right. Blue available create call popular spring into history.",
+        "telefono": 11488,
+        "fechaAlta": "1985-06-22"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 13,
+    "fields": {
+        "nombreUsuario": "Case near financial.",
+        "nombre": "White authority.",
+        "apellidos": "Development event middle a world onto.",
+        "correoElectronico": "South development sometimes shake specific. Specific walk sure whatever box.\nReason pressure operation concern one create. Art avoid run alone put friend develop.",
+        "dni": "Decide.",
+        "contrasenia": "Political contain type if three list born. Police professional enter if these woman head. Artist peace modern customer.",
+        "telefono": -30993,
+        "fechaAlta": "1990-10-19"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 14,
+    "fields": {
+        "nombreUsuario": "Collection buy.",
+        "nombre": "Find experience.",
+        "apellidos": "Help guy computer since concern new.",
+        "correoElectronico": "I the writer alone. Pretty federal fund get. Section indicate fight particularly ok customer last.\nWeight hot speak. They serve know set none. Relationship hot project avoid.",
+        "dni": "Unit.",
+        "contrasenia": "Its result certainly discuss really set. Put after side decade art spend.",
+        "telefono": 24669,
+        "fechaAlta": "2008-06-05"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 15,
+    "fields": {
+        "nombreUsuario": "Discussion southern.",
+        "nombre": "Ability time.",
+        "apellidos": "Choice understand computer end score own.",
+        "correoElectronico": "Economy school third card when young. Know three painting left lot.\nAble thought military most.",
+        "dni": "Treat.",
+        "contrasenia": "Certainly attention clearly side fine specific. Behind you everybody significant usually admit within.",
+        "telefono": -32754,
+        "fechaAlta": "1986-01-08"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 16,
+    "fields": {
+        "nombreUsuario": "Than report very PM.",
+        "nombre": "Doctor decision.",
+        "apellidos": "Possible together five gun name put.",
+        "correoElectronico": "Process and trouble dark. Teach stop but mean former price happy street. Them total mother seat.\nReach lot behavior where song quite none close. Piece professional commercial debate.",
+        "dni": "Reach.",
+        "contrasenia": "Magazine within baby. Too pattern short surface style radio set. Idea executive interesting. More certain spend son.",
+        "telefono": -30929,
+        "fechaAlta": "1989-03-21"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 17,
+    "fields": {
+        "nombreUsuario": "Later various not.",
+        "nombre": "Trouble decision.",
+        "apellidos": "Be evening hard whole.",
+        "correoElectronico": "Strong entire Mr one. Board writer year war. Trip out six. Share lawyer memory staff plan my continue.",
+        "dni": "Both.",
+        "contrasenia": "Choose approach left time quickly. Success cell back fish thank hot. Nature business understand accept single any sense.",
+        "telefono": -10313,
+        "fechaAlta": "2019-08-25"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 18,
+    "fields": {
+        "nombreUsuario": "Inside might let.",
+        "nombre": "Even house exactly.",
+        "apellidos": "Writer measure hear some different guess phone.",
+        "correoElectronico": "Girl nation personal shake against ready treat give.\nPiece how ball remember finally anyone. Arrive security final news never garden.",
+        "dni": "Example.",
+        "contrasenia": "Task reveal pull low thought. Stay people job deal surface material water.",
+        "telefono": 18643,
+        "fechaAlta": "1977-03-07"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 19,
+    "fields": {
+        "nombreUsuario": "Although allow onto.",
+        "nombre": "Star information.",
+        "apellidos": "Production because ten build few fill.",
+        "correoElectronico": "Mrs international quite pull place painting. Morning during involve could green need sign. Finish president collection opportunity sell office indeed.",
+        "dni": "Center.",
+        "contrasenia": "Success attention against note season record.",
+        "telefono": 7352,
+        "fechaAlta": "2017-11-08"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 20,
+    "fields": {
+        "nombreUsuario": "Someone time child.",
+        "nombre": "Difference such.",
+        "apellidos": "Financial not maintain charge news that.",
+        "correoElectronico": "Nearly sometimes avoid see usually play include. Should behavior interview hot.\nMrs present give drop toward TV risk. Late international sport region say city whom time.",
+        "dni": "Next sit.",
+        "contrasenia": "Recent near end friend discussion value white.",
+        "telefono": -31749,
+        "fechaAlta": "1986-12-19"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 21,
+    "fields": {
+        "nombreUsuario": "Letter recently.",
+        "nombre": "By allow heavy.",
+        "apellidos": "Role case tax effort reach behavior lay.",
+        "correoElectronico": "Task call agency style eye actually sing base. Rich card who television popular. Deep tell standard spring especially onto approach.",
+        "dni": "Suffer.",
+        "contrasenia": "Treatment choose even weight world never. Close law outside away amount.",
+        "telefono": -14297,
+        "fechaAlta": "1971-06-01"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 22,
+    "fields": {
+        "nombreUsuario": "Away true.",
+        "nombre": "This high of we.",
+        "apellidos": "Time would school thought study around laugh.",
+        "correoElectronico": "Have eight about night. Necessary three maybe will party American religious. Two carry data write audience. Quality red car dinner next experience.",
+        "dni": "Expert.",
+        "contrasenia": "Decide blue event. Develop should condition economic rest southern send work.",
+        "telefono": -20384,
+        "fechaAlta": "1992-05-02"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 23,
+    "fields": {
+        "nombreUsuario": "Former our spend.",
+        "nombre": "Case find section.",
+        "apellidos": "North most trouble feeling.",
+        "correoElectronico": "At check within body. Probably operation most. Those goal wonder us specific.\nAct reduce knowledge fill.\nCan indicate public star choice already. Mouth far nice both decision then.",
+        "dni": "Lawyer.",
+        "contrasenia": "North none hundred grow own. Notice body lose audience plan set music peace. Hear know executive study I network them.",
+        "telefono": -17194,
+        "fechaAlta": "1985-10-09"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 24,
+    "fields": {
+        "nombreUsuario": "Improve manage over.",
+        "nombre": "Cell fish bring.",
+        "apellidos": "But last TV main whether.",
+        "correoElectronico": "Able fire east fight spring work fall admit. Itself attack man cover successful organization can.\nAnyone property everything born traditional effect past. Visit pattern mind suggest tend.",
+        "dni": "My.",
+        "contrasenia": "Threat less age people. Behavior usually no. Buy baby anything old positive huge.",
+        "telefono": -31130,
+        "fechaAlta": "1989-07-15"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 25,
+    "fields": {
+        "nombreUsuario": "Economy coach.",
+        "nombre": "Senior old star.",
+        "apellidos": "Moment a Republican. Old list not.",
+        "correoElectronico": "Once society everyone mouth work result cause. Much scene choice matter western still reality despite.\nSuccess ask rather financial. Property enter make east high sing bank among.",
+        "dni": "About.",
+        "contrasenia": "Report marriage form establish. Human standard little network sport. Try arm company collection reality business family.",
+        "telefono": 26015,
+        "fechaAlta": "1973-05-10"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 26,
+    "fields": {
+        "nombreUsuario": "Leg mention report.",
+        "nombre": "Analysis impact.",
+        "apellidos": "Age speak at cold nothing different.",
+        "correoElectronico": "Player international edge energy memory even.\nChoice difficult keep.\nAnalysis base again. Will produce car eat man despite the. Short billion western series. Writer front cold radio usually.",
+        "dni": "Write.",
+        "contrasenia": "Example laugh dog reduce. Young good public fear. Although value figure improve.",
+        "telefono": -32409,
+        "fechaAlta": "2021-11-24"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 27,
+    "fields": {
+        "nombreUsuario": "Side why they when.",
+        "nombre": "Give air.",
+        "apellidos": "Director record usually citizen prove represent.",
+        "correoElectronico": "General environmental interest nice actually. Child health full.\nWear marriage evening shoulder benefit raise kid marriage. Magazine happen seat field past rise.\nGreen question send the right.",
+        "dni": "Office.",
+        "contrasenia": "From phone thing you hot treat short. Include quite line bag.",
+        "telefono": 3319,
+        "fechaAlta": "1989-04-24"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 28,
+    "fields": {
+        "nombreUsuario": "Exactly today term.",
+        "nombre": "And cultural.",
+        "apellidos": "Never win stop even put democratic.",
+        "correoElectronico": "Your win behind right system want life. Teacher hundred foot entire but gas method Republican.\nExist hospital Democrat group model reason. Own coach area.",
+        "dni": "Purpose.",
+        "contrasenia": "Believe job case watch. Unit enough reach scientist answer. Clear bed might dog address science.",
+        "telefono": 32085,
+        "fechaAlta": "1999-06-15"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 29,
+    "fields": {
+        "nombreUsuario": "During front reduce.",
+        "nombre": "Scientist impact.",
+        "apellidos": "Meeting firm business indicate near station.",
+        "correoElectronico": "Skin television material another student. Organization training factor line start. Best fine growth foreign record draw bring.",
+        "dni": "Involve.",
+        "contrasenia": "Partner group position lose stage.\nFind among movement stand sort training cover. Side through early pay.",
+        "telefono": -27634,
+        "fechaAlta": "2024-11-04"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 30,
+    "fields": {
+        "nombreUsuario": "Raise hospital way.",
+        "nombre": "Fish bit size.",
+        "apellidos": "Other pressure many plan analysis hear a.",
+        "correoElectronico": "Himself fast nice compare student century discuss. Specific majority summer available.\nGirl where everyone nothing same. Large say thousand seven. Ago wife change fine war three by.",
+        "dni": "Business.",
+        "contrasenia": "Cost cut high another current. Clearly mean teach share sport various. Establish girl production better color.",
+        "telefono": -13175,
+        "fechaAlta": "2012-07-07"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 31,
+    "fields": {
+        "nombreUsuario": "romulo25",
+        "nombre": "Cintia",
+        "apellidos": "Pedrosa",
+        "correoElectronico": "encarnacion31@example.net",
+        "dni": "64937354M",
+        "contrasenia": "313f0865c2606493481e65ebc52e0c354b6d28d7e79741fb1d5b7f8991bbdaca",
+        "telefono": 651217920,
+        "fechaAlta": "2025-04-16"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 32,
+    "fields": {
+        "nombreUsuario": "tatianalaguna",
+        "nombre": "Rosa María",
+        "apellidos": "Bueno",
+        "correoElectronico": "zvives@example.net",
+        "dni": "34660759N",
+        "contrasenia": "00a75d8e6355cdcf4dd22aa6d465ef4f607ae8658fd41de5ad45b128555bb4d0",
+        "telefono": 613286652,
+        "fechaAlta": "2026-08-21"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 33,
+    "fields": {
+        "nombreUsuario": "nazaretibanez",
+        "nombre": "Macarena",
+        "apellidos": "Comas",
+        "correoElectronico": "miguel69@example.net",
+        "dni": "37979927G",
+        "contrasenia": "8d190843a0524775b43f8f523de4f51a3cc22fc63517bdd1cdf775cc904aeb97",
+        "telefono": 600751841,
+        "fechaAlta": "2024-12-19"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 34,
+    "fields": {
+        "nombreUsuario": "cristinaferrero",
+        "nombre": "Violeta",
+        "apellidos": "Olivares",
+        "correoElectronico": "gonzalosaavedra@example.net",
+        "dni": "45896050X",
+        "contrasenia": "f57ea43b44d6f63d534956ea8569b9273e401a1f5193b4ff2668ef151e906a06",
+        "telefono": 672614909,
+        "fechaAlta": "2026-07-27"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 35,
+    "fields": {
+        "nombreUsuario": "pbecerra",
+        "nombre": "Brígida",
+        "apellidos": "Cabanillas",
+        "correoElectronico": "epifanio83@example.org",
+        "dni": "48109500D",
+        "contrasenia": "dc879b9bb9a14c19c016e1a206d8d94f96d71a4823938a99884378a63dcf5009",
+        "telefono": 638715077,
+        "fechaAlta": "2025-12-12"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 36,
+    "fields": {
+        "nombreUsuario": "wpellicer",
+        "nombre": "Juanita",
+        "apellidos": "Linares",
+        "correoElectronico": "wcampillo@example.net",
+        "dni": "49870699Y",
+        "contrasenia": "5fed0b4ad4b0f1188c9c37ebfc9ef4a7cb72071fc8741ba8d627c05556ee8078",
+        "telefono": 649347316,
+        "fechaAlta": "2025-01-21"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 37,
+    "fields": {
+        "nombreUsuario": "nilda33",
+        "nombre": "Lorena",
+        "apellidos": "Miralles",
+        "correoElectronico": "jose-francisco33@example.org",
+        "dni": "03542053F",
+        "contrasenia": "03f049839e98df220f8628904b061b5274142084611e008345c1e04709127213",
+        "telefono": 623408464,
+        "fechaAlta": "2024-12-23"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 38,
+    "fields": {
+        "nombreUsuario": "juribe",
+        "nombre": "Cristian",
+        "apellidos": "Caballero",
+        "correoElectronico": "emiliobonilla@example.com",
+        "dni": "74299334L",
+        "contrasenia": "06a600ba94395e55f51846fd190c0985fd1a3b776db7e7fa1cacdbc8e18c2bb9",
+        "telefono": 611297239,
+        "fechaAlta": "2026-01-06"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 39,
+    "fields": {
+        "nombreUsuario": "maria-angeles09",
+        "nombre": "Vilma",
+        "apellidos": "Ocaña",
+        "correoElectronico": "garayeugenio@example.org",
+        "dni": "72573191A",
+        "contrasenia": "d8d0f4296211d1828b33dd33db64c15e1b8f849d52b8d2d10c98b8e67101009c",
+        "telefono": 605073698,
+        "fechaAlta": "2025-07-04"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 40,
+    "fields": {
+        "nombreUsuario": "hrossello",
+        "nombre": "Micaela",
+        "apellidos": "Giménez",
+        "correoElectronico": "lagunabonifacio@example.net",
+        "dni": "37419658S",
+        "contrasenia": "234ac8ee4d372e7ec102de3dc77db00f82616cbb5a71a505753f8c409ba67d48",
+        "telefono": 678718007,
+        "fechaAlta": "2026-02-27"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 41,
+    "fields": {
+        "nombreUsuario": "flormaria-dolores",
+        "nombre": "Berto",
+        "apellidos": "Múñiz",
+        "correoElectronico": "tristan66@example.org",
+        "dni": "11092553K",
+        "contrasenia": "b23384215ff610f570da0dfb7d6bdaa8451046cfbb18c239025f44856f9e0db5",
+        "telefono": 690356738,
+        "fechaAlta": "2026-09-21"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 42,
+    "fields": {
+        "nombreUsuario": "soniaalcaraz",
+        "nombre": "Inés",
+        "apellidos": "Casanovas",
+        "correoElectronico": "bruamaro@example.org",
+        "dni": "65876157V",
+        "contrasenia": "429ad983f4b96272cf1ae60ee9b05d9dd28abe47c63a81660c0a3b0766001fe6",
+        "telefono": 635536847,
+        "fechaAlta": "2025-05-14"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 43,
+    "fields": {
+        "nombreUsuario": "qpablo",
+        "nombre": "Vidal",
+        "apellidos": "Perez",
+        "correoElectronico": "alastra@example.com",
+        "dni": "70888206K",
+        "contrasenia": "f65c81246785a1cae1afa4aae461421bd17fde84477ee614ad6eed924be57f6d",
+        "telefono": 651510620,
+        "fechaAlta": "2026-01-25"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 44,
+    "fields": {
+        "nombreUsuario": "valcarcelani",
+        "nombre": "Rosalía",
+        "apellidos": "Garay",
+        "correoElectronico": "sevillanoemelina@example.com",
+        "dni": "08310271A",
+        "contrasenia": "4835f24de9e7790e4ac890408b02d109d4b75beafcabfd4c56563ddcad93382f",
+        "telefono": 618198248,
+        "fechaAlta": "2025-04-30"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 45,
+    "fields": {
+        "nombreUsuario": "walvaro",
+        "nombre": "Eloísa",
+        "apellidos": "Olmedo",
+        "correoElectronico": "narcisavelasco@example.net",
+        "dni": "42970051W",
+        "contrasenia": "1dc24b6e1023ff5c48d64287a22c1f1f85dad2c056dc820b2dd8686aaeb3fec0",
+        "telefono": 660332573,
+        "fechaAlta": "2025-06-08"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 46,
+    "fields": {
+        "nombreUsuario": "bravocebrian",
+        "nombre": "Angélica",
+        "apellidos": "Gonzalez",
+        "correoElectronico": "ppascual@example.net",
+        "dni": "85398305H",
+        "contrasenia": "ab71fd5b77f87a44dc734a9b3f557181640550d0770d6cb5e094f079afac4a6e",
+        "telefono": 637979785,
+        "fechaAlta": "2026-05-03"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 47,
+    "fields": {
+        "nombreUsuario": "baudelio11",
+        "nombre": "Heliodoro",
+        "apellidos": "Herranz",
+        "correoElectronico": "maria-cristina52@example.org",
+        "dni": "31698640V",
+        "contrasenia": "c55d900a41e5f56ae1aacac477da9683551e639e36180dfab8235af6d8912394",
+        "telefono": 685576124,
+        "fechaAlta": "2025-03-04"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 48,
+    "fields": {
+        "nombreUsuario": "valeriovillalba",
+        "nombre": "Anselmo",
+        "apellidos": "Peral",
+        "correoElectronico": "galomalo@example.com",
+        "dni": "67865026F",
+        "contrasenia": "c3916bbcccee6befd63af957b2006d88a39791676873cf493f6ee784b6c9db41",
+        "telefono": 655611463,
+        "fechaAlta": "2025-07-28"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 49,
+    "fields": {
+        "nombreUsuario": "magdalena48",
+        "nombre": "Josefa",
+        "apellidos": "Gallardo",
+        "correoElectronico": "cecilio51@example.com",
+        "dni": "04139398L",
+        "contrasenia": "340d1fab8e90c1f769d5ebde6ae63fdf07255f10137dbf4cd4ea57d2cceb382a",
+        "telefono": 683834947,
+        "fechaAlta": "2025-03-23"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 50,
+    "fields": {
+        "nombreUsuario": "tmoliner",
+        "nombre": "Mariana",
+        "apellidos": "Fábregas",
+        "correoElectronico": "elimurcia@example.net",
+        "dni": "08525837J",
+        "contrasenia": "b3ada6b5e191c40f20829017b8a624380601141eabd042ab6bf4070630cce5f4",
+        "telefono": 614997037,
+        "fechaAlta": "2026-09-14"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 51,
+    "fields": {
+        "nombreUsuario": "gimenezgodofredo",
+        "nombre": "Lorena",
+        "apellidos": "Lasa",
+        "correoElectronico": "xtalavera@example.net",
+        "dni": "00603755M",
+        "contrasenia": "ea44d1a9f081b39d743fbbd4caeae1db552f9ca72796509bb946e93a7b73a4bf",
+        "telefono": 632923574,
+        "fechaAlta": "2025-09-25"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 52,
+    "fields": {
+        "nombreUsuario": "guerreroceferino",
+        "nombre": "Dionisio",
+        "apellidos": "Gallart",
+        "correoElectronico": "rinconalbano@example.com",
+        "dni": "17555303R",
+        "contrasenia": "2bdb9cea95aafca8da3ed89d6b8b2681e80862023222ec8ac9ad106d1e8ea2c8",
+        "telefono": 605248778,
+        "fechaAlta": "2025-01-02"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 53,
+    "fields": {
+        "nombreUsuario": "rico56",
+        "nombre": "Teresa",
+        "apellidos": "Quiroga",
+        "correoElectronico": "wdalmau@example.org",
+        "dni": "71357989Y",
+        "contrasenia": "1a26e0eee08d3f3f4f2d7d07ccbe069fe3b3c7ecf600f74aa7b5975e1a5c9090",
+        "telefono": 683589859,
+        "fechaAlta": "2026-10-10"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 54,
+    "fields": {
+        "nombreUsuario": "nereidanarvaez",
+        "nombre": "Nicodemo",
+        "apellidos": "Sanabria",
+        "correoElectronico": "marianaguardiola@example.com",
+        "dni": "08368034J",
+        "contrasenia": "7d9010fa46352b34c6530d830880fef1e915dcc7187081b6a34138bbd2b9f8bc",
+        "telefono": 620509762,
+        "fechaAlta": "2025-05-01"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 55,
+    "fields": {
+        "nombreUsuario": "iprats",
+        "nombre": "Teresa",
+        "apellidos": "Escalona",
+        "correoElectronico": "rosario65@example.org",
+        "dni": "96798539A",
+        "contrasenia": "4bfab9aee710d731d71a02cf36c43d59b45a2084ce091ea339e23d881cbbf451",
+        "telefono": 608283590,
+        "fechaAlta": "2026-10-10"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 56,
+    "fields": {
+        "nombreUsuario": "victorreguera",
+        "nombre": "Leocadio",
+        "apellidos": "Rodriguez",
+        "correoElectronico": "pratsserafina@example.org",
+        "dni": "32863753L",
+        "contrasenia": "7916abe1065919cf514faf7b03c8de585880cbb79a03c59388244a9a6be23dcd",
+        "telefono": 698189770,
+        "fechaAlta": "2026-09-28"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 57,
+    "fields": {
+        "nombreUsuario": "trovira",
+        "nombre": "Angélica",
+        "apellidos": "Jaén",
+        "correoElectronico": "rmoraleda@example.org",
+        "dni": "56970395Q",
+        "contrasenia": "16137d74093c1961ff0d2384eb25e2509c79e2a0c9df7de33d125f2021f6060c",
+        "telefono": 603510706,
+        "fechaAlta": "2025-03-19"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 58,
+    "fields": {
+        "nombreUsuario": "zarana",
+        "nombre": "Gonzalo",
+        "apellidos": "Solana",
+        "correoElectronico": "gracianasalas@example.org",
+        "dni": "91552374T",
+        "contrasenia": "ba050b1be245e27f4c5f1ce216d1884dc9912c95b025cb0b153c5a6366b52b68",
+        "telefono": 644806751,
+        "fechaAlta": "2026-04-24"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 59,
+    "fields": {
+        "nombreUsuario": "qarribas",
+        "nombre": "Lázaro",
+        "apellidos": "Solera",
+        "correoElectronico": "lazaro07@example.org",
+        "dni": "45409322P",
+        "contrasenia": "eb2f8f024bd9151f3e33f52ddce193212b51f626806f51456d23678e9f9fca4e",
+        "telefono": 681804665,
+        "fechaAlta": "2026-03-06"
+    }
+},
+{
+    "model": "sportHub.usuario",
+    "pk": 60,
+    "fields": {
+        "nombreUsuario": "eechevarria",
+        "nombre": "Apolonia",
+        "apellidos": "Pombo",
+        "correoElectronico": "porfiriofranch@example.net",
+        "dni": "99284272B",
+        "contrasenia": "9c8ad0336db360cfd3764b9e056b93f54ffe243c6743fab62261534cec60f568",
+        "telefono": 674542101,
+        "fechaAlta": "2025-05-26"
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 11,
+    "fields": {
+        "cargo": "Prepare reality because tell something."
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 12,
+    "fields": {
+        "cargo": "Management threat PM live so get."
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 13,
+    "fields": {
+        "cargo": "Guy by look give us poor source."
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 14,
+    "fields": {
+        "cargo": "Avoid decision radio instead computer."
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 15,
+    "fields": {
+        "cargo": "Green probably station against brother world."
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 16,
+    "fields": {
+        "cargo": "Try according nothing Congress attorney consider."
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 17,
+    "fields": {
+        "cargo": "Too history can treatment modern."
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 18,
+    "fields": {
+        "cargo": "Western arm wonder person process."
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 19,
+    "fields": {
+        "cargo": "Capital hot care area. Hit six begin short."
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 20,
+    "fields": {
+        "cargo": "Issue teacher bring red respond."
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 41,
+    "fields": {
+        "cargo": "Gerente de sucursales de bancos, de servicios fina"
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 42,
+    "fields": {
+        "cargo": "Personal directivo de la administración pública"
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 43,
+    "fields": {
+        "cargo": "Diseñador de bases de datos"
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 44,
+    "fields": {
+        "cargo": "Profesional religioso"
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 45,
+    "fields": {
+        "cargo": "Físico"
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 46,
+    "fields": {
+        "cargo": "Ayudante de odontología"
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 47,
+    "fields": {
+        "cargo": "Paisajista"
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 48,
+    "fields": {
+        "cargo": "Maestro preescolar"
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 49,
+    "fields": {
+        "cargo": "Artesano"
+    }
+},
+{
+    "model": "sportHub.administrador",
+    "pk": 50,
+    "fields": {
+        "cargo": "Actuario"
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 1,
+    "fields": {
+        "codigoPostal": -23347,
+        "ciudad": "Tough rate research.",
+        "calleNumero": "Election teacher difficult. Skin quite inside night develop we. Require view between real minute family.\nSummer range right list central drive. Tree institution money tell area."
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 2,
+    "fields": {
+        "codigoPostal": 28227,
+        "ciudad": "Audience smile support activity work case.",
+        "calleNumero": "Democrat themselves through. Public collection too reveal experience interesting myself sign.\nRadio smile may century beat actually. Industry including sort name down sister chair tend."
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 3,
+    "fields": {
+        "codigoPostal": 24855,
+        "ciudad": "Store we resource energy year child.",
+        "calleNumero": "Less certain difficult change spring technology high. According police you family throughout about if. Get teach very let country."
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 4,
+    "fields": {
+        "codigoPostal": 6301,
+        "ciudad": "Window American vote her member party southern.",
+        "calleNumero": "Ground future throughout.\nCause reach so what. Resource short vote us stop.\nLand ability finally shoulder event game long education.\nUnder view there itself."
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 5,
+    "fields": {
+        "codigoPostal": 7592,
+        "ciudad": "If friend lay. Artist machine new fight.",
+        "calleNumero": "Total avoid campaign professor to. Surface hope indeed by. Bill minute language stay blood."
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 6,
+    "fields": {
+        "codigoPostal": 12005,
+        "ciudad": "Never no again source decade. Hear across accept.",
+        "calleNumero": "What political situation hear. Various would yourself wish exist policy room every.\nWhen network enjoy discover throughout billion list. Foreign foot occur great. Growth clearly they role will."
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 7,
+    "fields": {
+        "codigoPostal": -9382,
+        "ciudad": "Smile already finally interest model.",
+        "calleNumero": "Young positive way government respond most one.\nFloor box have wait head admit fly environment. Entire soon company end many region song."
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 8,
+    "fields": {
+        "codigoPostal": -3952,
+        "ciudad": "Still represent ground attack woman two.",
+        "calleNumero": "Campaign night large hear.\nMedical speak thank available. Similar everything four range. Car financial weight ten position could happy.\nPurpose career range for think. Interview among her edge."
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 9,
+    "fields": {
+        "codigoPostal": -15653,
+        "ciudad": "Computer thus paper building work mind.",
+        "calleNumero": "Bit pick anyone central tonight. Save later finish use magazine prepare."
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 10,
+    "fields": {
+        "codigoPostal": -29073,
+        "ciudad": "Trade impact plant treatment. Area onto almost.",
+        "calleNumero": "Health mission something business cold character moment. Look put evidence."
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 11,
+    "fields": {
+        "codigoPostal": 23553,
+        "ciudad": "Cuenca",
+        "calleNumero": "Glorieta Juan Bautista Bas 15 Piso 5 "
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 12,
+    "fields": {
+        "codigoPostal": 2379,
+        "ciudad": "Cantabria",
+        "calleNumero": "Alameda Valentín Garriga 21"
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 13,
+    "fields": {
+        "codigoPostal": 31618,
+        "ciudad": "Málaga",
+        "calleNumero": "Ronda de Félix Cánovas 98"
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 14,
+    "fields": {
+        "codigoPostal": 18880,
+        "ciudad": "Vizcaya",
+        "calleNumero": "Calle Timoteo Taboada 66"
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 15,
+    "fields": {
+        "codigoPostal": 51216,
+        "ciudad": "León",
+        "calleNumero": "Pasaje Dafne Falcó 26"
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 16,
+    "fields": {
+        "codigoPostal": 44844,
+        "ciudad": "Lleida",
+        "calleNumero": "Vial Loreto Campo 924 Puerta 6 "
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 17,
+    "fields": {
+        "codigoPostal": 2294,
+        "ciudad": "Soria",
+        "calleNumero": "Vial Bonifacio Morán 29"
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 18,
+    "fields": {
+        "codigoPostal": 3780,
+        "ciudad": "Guipúzcoa",
+        "calleNumero": "Cañada Olga Buendía 97 Piso 5 "
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 19,
+    "fields": {
+        "codigoPostal": 49809,
+        "ciudad": "Burgos",
+        "calleNumero": "Plaza de Úrsula Lastra 804"
+    }
+},
+{
+    "model": "sportHub.direccion",
+    "pk": 20,
+    "fields": {
+        "codigoPostal": 2440,
+        "ciudad": "León",
+        "calleNumero": "C. Marciano Nevado 32"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 1,
+    "fields": {
+        "porcentaje": "0.65"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 2,
+    "fields": {
+        "porcentaje": "0.45"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 3,
+    "fields": {
+        "porcentaje": "0.10"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 4,
+    "fields": {
+        "porcentaje": "0.83"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 5,
+    "fields": {
+        "porcentaje": "0.69"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 6,
+    "fields": {
+        "porcentaje": "0.95"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 7,
+    "fields": {
+        "porcentaje": "0.93"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 8,
+    "fields": {
+        "porcentaje": "0.82"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 9,
+    "fields": {
+        "porcentaje": "0.32"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 10,
+    "fields": {
+        "porcentaje": "0.21"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 11,
+    "fields": {
+        "porcentaje": "34.00"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 12,
+    "fields": {
+        "porcentaje": "30.00"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 13,
+    "fields": {
+        "porcentaje": "24.00"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 14,
+    "fields": {
+        "porcentaje": "6.00"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 15,
+    "fields": {
+        "porcentaje": "20.00"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 16,
+    "fields": {
+        "porcentaje": "24.00"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 17,
+    "fields": {
+        "porcentaje": "25.00"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 18,
+    "fields": {
+        "porcentaje": "15.00"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 19,
+    "fields": {
+        "porcentaje": "6.00"
+    }
+},
+{
+    "model": "sportHub.descuento",
+    "pk": 20,
+    "fields": {
+        "porcentaje": "14.00"
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 21,
+    "fields": {
+        "CodigoDescuento": "Area democratic.",
+        "Puesto": "Four bill point maybe effort itself foreign.",
+        "fechaContratacion": "1985-06-22",
+        "descuento": 3
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 22,
+    "fields": {
+        "CodigoDescuento": "Minute recently.",
+        "Puesto": "Act court today against what present care.",
+        "fechaContratacion": "2015-03-27",
+        "descuento": 1
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 23,
+    "fields": {
+        "CodigoDescuento": "Own recently.",
+        "Puesto": "Win grow phone inside arrive husband.",
+        "fechaContratacion": "2000-10-22",
+        "descuento": 6
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 24,
+    "fields": {
+        "CodigoDescuento": "A peace side huge.",
+        "Puesto": "Professional a price no price site trade.",
+        "fechaContratacion": "1977-03-08",
+        "descuento": 6
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 25,
+    "fields": {
+        "CodigoDescuento": "Do five compare.",
+        "Puesto": "Public set society whatever detail need.",
+        "fechaContratacion": "1987-06-23",
+        "descuento": 3
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 26,
+    "fields": {
+        "CodigoDescuento": "Every price card.",
+        "Puesto": "Best raise bring project bit.",
+        "fechaContratacion": "2013-04-27",
+        "descuento": 3
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 27,
+    "fields": {
+        "CodigoDescuento": "Weight good me.",
+        "Puesto": "Crime natural take dinner dinner.",
+        "fechaContratacion": "2006-07-21",
+        "descuento": 8
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 28,
+    "fields": {
+        "CodigoDescuento": "Green building.",
+        "Puesto": "Audience follow recently range buy over.",
+        "fechaContratacion": "1978-02-16",
+        "descuento": 4
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 29,
+    "fields": {
+        "CodigoDescuento": "Represent family.",
+        "Puesto": "Painting industry room once.",
+        "fechaContratacion": "1999-09-28",
+        "descuento": 7
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 30,
+    "fields": {
+        "CodigoDescuento": "Agree us across.",
+        "Puesto": "Already very base idea similar tough method.",
+        "fechaContratacion": "1981-09-26",
+        "descuento": 2
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 51,
+    "fields": {
+        "CodigoDescuento": "DESC-TQRN-4652",
+        "Puesto": "Guardagujas",
+        "fechaContratacion": "2025-10-24",
+        "descuento": 13
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 52,
+    "fields": {
+        "CodigoDescuento": "DESC-IGZT-1566",
+        "Puesto": "Agente de bolsa",
+        "fechaContratacion": "2025-02-13",
+        "descuento": 11
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 53,
+    "fields": {
+        "CodigoDescuento": "DESC-EBDO-4788",
+        "Puesto": "Abogado",
+        "fechaContratacion": "2022-01-02",
+        "descuento": 16
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 54,
+    "fields": {
+        "CodigoDescuento": "DESC-ABJV-8357",
+        "Puesto": "Sombrerero",
+        "fechaContratacion": "2026-01-03",
+        "descuento": 15
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 55,
+    "fields": {
+        "CodigoDescuento": "DESC-TMMN-2674",
+        "Puesto": "Profesional de nivel medio de partería",
+        "fechaContratacion": "2026-05-24",
+        "descuento": 12
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 56,
+    "fields": {
+        "CodigoDescuento": "DESC-WQVZ-1788",
+        "Puesto": "Operador de máquinas de movimiento de tierras",
+        "fechaContratacion": "2023-03-26",
+        "descuento": 15
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 57,
+    "fields": {
+        "CodigoDescuento": "DESC-VHOX-1122",
+        "Puesto": "Director de servicios de salud",
+        "fechaContratacion": "2022-12-13",
+        "descuento": 17
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 58,
+    "fields": {
+        "CodigoDescuento": "DESC-HCID-7285",
+        "Puesto": "Sociólogo",
+        "fechaContratacion": "2026-04-23",
+        "descuento": 16
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 59,
+    "fields": {
+        "CodigoDescuento": "DESC-KAGP-1995",
+        "Puesto": "Tramper",
+        "fechaContratacion": "2024-07-09",
+        "descuento": 11
+    }
+},
+{
+    "model": "sportHub.trabajador",
+    "pk": 60,
+    "fields": {
+        "CodigoDescuento": "DESC-DBOG-4033",
+        "Puesto": "Químico",
+        "fechaContratacion": "2024-12-08",
+        "descuento": 16
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 1,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "Quite glass help receive summer prevent room. Keep third mind hope.\nForeign size yard allow specific. Own authority tax.",
+        "fecha_envio": "2026-10-26T11:58:47.193",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 2,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "Bed property least. Instead of include community person. Reality reality light wide ask determine table.",
+        "fecha_envio": "2026-10-26T11:58:47.193",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 3,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "Song foot view most. Interest new blood only subject skin support available. Around add mean indicate whether.",
+        "fecha_envio": "2026-10-26T11:58:47.193",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 4,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "Science stay whose hold write author. Key everyone many no region score add behavior. Share really true month upon watch.",
+        "fecha_envio": "2026-10-26T11:58:47.193",
+        "leida": false,
+        "fecha_lectura": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 5,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "Health purpose success world. Company outside positive civil. Natural matter support democratic next allow close.",
+        "fecha_envio": "2026-10-26T11:58:47.193",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 6,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "Real mission cut protect difference voice tough. Present program civil next.\nPresident assume instead some.",
+        "fecha_envio": "2026-10-26T11:58:47.193",
+        "leida": false,
+        "fecha_lectura": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 7,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "Teach eye work upon. Position bed now price yard occur stay me. Put edge sport off her thing experience.\nPick whom draw us sort local. Along each wish defense four speak. Dog wall hotel happen.",
+        "fecha_envio": "2026-10-26T11:58:47.193",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 8,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "Who fly hold bring loss girl opportunity. Watch store other amount.\nAnything manager occur certainly. Report take skill. Our push sure attorney. Go deep I professor.",
+        "fecha_envio": "2026-10-26T11:58:47.193",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 9,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "He authority plan.\nSpace analysis stage organization response green seem. Pay production let color produce. Hundred million build marriage could.",
+        "fecha_envio": "2026-10-26T11:58:47.193",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 10,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "Account professor best morning fine trouble meeting especially.\nList new sit total middle glass end.",
+        "fecha_envio": "2026-10-26T11:58:47.193",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 11,
+    "fields": {
+        "tipo": "REGIST",
+        "mensaje": "Sino además alguien sobre cierta podía todo.",
+        "fecha_envio": "2026-10-26T12:18:54.089",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T12:18:54.089"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 12,
+    "fields": {
+        "tipo": "REGIST",
+        "mensaje": "Suficiente seis pueden plan también siquiera n operación mismos secretario electoral cerca investigación.",
+        "fecha_envio": "2026-10-26T12:18:54.092",
+        "leida": false,
+        "fecha_lectura": "2026-10-26T12:18:54.092"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 13,
+    "fields": {
+        "tipo": "ANUL",
+        "mensaje": "Cuadro encima acuerdo allá parece llegado.",
+        "fecha_envio": "2026-10-26T12:18:54.096",
+        "leida": false,
+        "fecha_lectura": "2026-10-26T12:18:54.096"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 14,
+    "fields": {
+        "tipo": "REGIST",
+        "mensaje": "Mujer m derechos servicios arte participación información existencia rafael.",
+        "fecha_envio": "2026-10-26T12:18:54.099",
+        "leida": false,
+        "fecha_lectura": "2026-10-26T12:18:54.099"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 15,
+    "fields": {
+        "tipo": "REGIST",
+        "mensaje": "Pronto viejo papel que nueva tendrá.",
+        "fecha_envio": "2026-10-26T12:18:54.102",
+        "leida": false,
+        "fecha_lectura": "2026-10-26T12:18:54.102"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 16,
+    "fields": {
+        "tipo": "ANUL",
+        "mensaje": "Causa sean aspecto efecto decisión manuel blanco características rodríguez sola señaló aspectos.",
+        "fecha_envio": "2026-10-26T12:18:54.106",
+        "leida": false,
+        "fecha_lectura": "2026-10-26T12:18:54.106"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 17,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "Posición otro gran propio fecha horas ambos lucha carta además medio resultado.",
+        "fecha_envio": "2026-10-26T12:18:54.109",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T12:18:54.109"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 18,
+    "fields": {
+        "tipo": "RESER",
+        "mensaje": "Argentina hacerlo cuba ahora rosa temas pregunta.",
+        "fecha_envio": "2026-10-26T12:18:54.112",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T12:18:54.112"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 19,
+    "fields": {
+        "tipo": "REGIST",
+        "mensaje": "Aun grande luis posición mañana señaló importante mediante.",
+        "fecha_envio": "2026-10-26T12:18:54.115",
+        "leida": true,
+        "fecha_lectura": "2026-10-26T12:18:54.115"
+    }
+},
+{
+    "model": "sportHub.notificacion",
+    "pk": 20,
+    "fields": {
+        "tipo": "REGIST",
+        "mensaje": "Mayores sangre mejores mes amigos tan tema aquellas militar habla.",
+        "fecha_envio": "2026-10-26T12:18:54.120",
+        "leida": false,
+        "fecha_lectura": "2026-10-26T12:18:54.120"
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 1,
+    "fields": {
+        "num_serie": -10367,
+        "direccion_IP": "76f4:6782:4615:ecc5:272c:7311:e386:ece7",
+        "modelo_fabricante": "Data."
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 2,
+    "fields": {
+        "num_serie": 9383,
+        "direccion_IP": "d7c2:313d:e4ed:bb93:338:ee6a:8260:f840",
+        "modelo_fabricante": "Seat."
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 3,
+    "fields": {
+        "num_serie": 954,
+        "direccion_IP": "8311:8392:edac:fce9:e9f4:65ec:48f3:3f93",
+        "modelo_fabricante": "Sea."
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 4,
+    "fields": {
+        "num_serie": 28650,
+        "direccion_IP": "9d5f:ab20:a9cd:ae00:1d6e:bb5c:2272:568",
+        "modelo_fabricante": "Human."
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 5,
+    "fields": {
+        "num_serie": 16045,
+        "direccion_IP": "50f0:8c0:53d0:fa0b:a7f9:89ed:cec0:b1f5",
+        "modelo_fabricante": "But."
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 6,
+    "fields": {
+        "num_serie": -23656,
+        "direccion_IP": "6c51:a546:2e3e:b876:70bf:1ff:9288:ad4b",
+        "modelo_fabricante": "Rest."
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 7,
+    "fields": {
+        "num_serie": -7370,
+        "direccion_IP": "b7fe:953b:4335:f8e6:5a09:ca3a:e811:41db",
+        "modelo_fabricante": "Value."
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 8,
+    "fields": {
+        "num_serie": -17162,
+        "direccion_IP": "4ecb:f79d:22b8:b4a0:5f4:6661:16b1:2862",
+        "modelo_fabricante": "Place."
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 9,
+    "fields": {
+        "num_serie": -17293,
+        "direccion_IP": "b0ef:472b:c025:7507:9a43:121a:695d:140b",
+        "modelo_fabricante": "Feel."
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 10,
+    "fields": {
+        "num_serie": -3816,
+        "direccion_IP": "6a32:3d30:57d6:4cb9:e0a7:b5d7:1abc:58ab",
+        "modelo_fabricante": "Push."
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 11,
+    "fields": {
+        "num_serie": 901239,
+        "direccion_IP": "141.239.239.203",
+        "modelo_fabricante": "YGR867"
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 12,
+    "fields": {
+        "num_serie": 970151,
+        "direccion_IP": "4.247.198.127",
+        "modelo_fabricante": "SLR187"
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 13,
+    "fields": {
+        "num_serie": 383485,
+        "direccion_IP": "34.205.23.20",
+        "modelo_fabricante": "VCB491"
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 14,
+    "fields": {
+        "num_serie": 600913,
+        "direccion_IP": "202.50.121.239",
+        "modelo_fabricante": "OQM822"
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 15,
+    "fields": {
+        "num_serie": 426272,
+        "direccion_IP": "65.229.99.22",
+        "modelo_fabricante": "FGB672"
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 16,
+    "fields": {
+        "num_serie": 220542,
+        "direccion_IP": "14.4.166.60",
+        "modelo_fabricante": "GWX744"
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 17,
+    "fields": {
+        "num_serie": 365442,
+        "direccion_IP": "49.17.35.115",
+        "modelo_fabricante": "WFT976"
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 18,
+    "fields": {
+        "num_serie": 171982,
+        "direccion_IP": "28.149.206.207",
+        "modelo_fabricante": "CWR981"
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 19,
+    "fields": {
+        "num_serie": 64162,
+        "direccion_IP": "12.248.142.2",
+        "modelo_fabricante": "MZM533"
+    }
+},
+{
+    "model": "sportHub.sistema_control",
+    "pk": 20,
+    "fields": {
+        "num_serie": 270410,
+        "direccion_IP": "125.205.204.145",
+        "modelo_fabricante": "XPX166"
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 1,
+    "fields": {
+        "nombre": "Continue travel contain. Near base sister you.",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 15,
+        "idDireccion": 1
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 2,
+    "fields": {
+        "nombre": "Push air side. Before pretty your also.",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 13,
+        "idDireccion": 7
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 3,
+    "fields": {
+        "nombre": "Phone wrong citizen garden poor.",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 17,
+        "idDireccion": 8
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 4,
+    "fields": {
+        "nombre": "Standard space unit might.",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 16,
+        "idDireccion": 3
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 5,
+    "fields": {
+        "nombre": "Mention mention describe structure run order I.",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 18,
+        "idDireccion": 5
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 6,
+    "fields": {
+        "nombre": "Want us star ahead whether.",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 12,
+        "idDireccion": 10
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 7,
+    "fields": {
+        "nombre": "She decide nice marriage just.",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 16,
+        "idDireccion": 4
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 8,
+    "fields": {
+        "nombre": "Idea within make whose.",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 19,
+        "idDireccion": 2
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 9,
+    "fields": {
+        "nombre": "Music man Republican data goal.",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 11,
+        "idDireccion": 6
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 10,
+    "fields": {
+        "nombre": "Court space store peace how ask feel.",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 12,
+        "idDireccion": 9
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 11,
+    "fields": {
+        "nombre": "Polideportivo Grande",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 42,
+        "idDireccion": 11
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 12,
+    "fields": {
+        "nombre": "Polideportivo Martinez",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 49,
+        "idDireccion": 12
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 13,
+    "fields": {
+        "nombre": "Polideportivo Mendoza",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 48,
+        "idDireccion": 13
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 14,
+    "fields": {
+        "nombre": "Polideportivo Benitez",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 47,
+        "idDireccion": 14
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 15,
+    "fields": {
+        "nombre": "Polideportivo Arco",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 42,
+        "idDireccion": 15
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 16,
+    "fields": {
+        "nombre": "Polideportivo Ayala",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 49,
+        "idDireccion": 16
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 17,
+    "fields": {
+        "nombre": "Polideportivo Mulet",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 44,
+        "idDireccion": 17
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 18,
+    "fields": {
+        "nombre": "Polideportivo Calderón",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 42,
+        "idDireccion": 18
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 19,
+    "fields": {
+        "nombre": "Polideportivo Rueda",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 45,
+        "idDireccion": 19
+    }
+},
+{
+    "model": "sportHub.polideportivo",
+    "pk": 20,
+    "fields": {
+        "nombre": "Polideportivo Pedrosa",
+        "hora_apertura": "09:00:00",
+        "hora_cierre": "22:00:00",
+        "idUsuario": 49,
+        "idDireccion": 20
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 1,
+    "fields": {
+        "tipo": "System tell chance hope toward.",
+        "estado": "Say serious design.",
+        "metro": "0.43",
+        "idUsuario": 7,
+        "idPolideportivo": 9,
+        "idSistema_Control": 8
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 2,
+    "fields": {
+        "tipo": "Loss common place describe focus air glass.",
+        "estado": "Hold future.",
+        "metro": "0.49",
+        "idUsuario": 2,
+        "idPolideportivo": 2,
+        "idSistema_Control": 4
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 3,
+    "fields": {
+        "tipo": "Describe cost source song care animal word.",
+        "estado": "Behavior season.",
+        "metro": "0.94",
+        "idUsuario": 10,
+        "idPolideportivo": 10,
+        "idSistema_Control": 8
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 4,
+    "fields": {
+        "tipo": "Story though sing rather soldier grow miss.",
+        "estado": "Far city tell page.",
+        "metro": "0.14",
+        "idUsuario": 9,
+        "idPolideportivo": 9,
+        "idSistema_Control": 2
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 5,
+    "fields": {
+        "tipo": "Table letter car shake simply social pretty.",
+        "estado": "Big best play.",
+        "metro": "0.09",
+        "idUsuario": 2,
+        "idPolideportivo": 8,
+        "idSistema_Control": 3
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 6,
+    "fields": {
+        "tipo": "Year few way clearly coach eye computer.",
+        "estado": "Seek company save.",
+        "metro": "0.62",
+        "idUsuario": 3,
+        "idPolideportivo": 7,
+        "idSistema_Control": 6
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 7,
+    "fields": {
+        "tipo": "Character agency citizen boy baby chance term.",
+        "estado": "Factor you.",
+        "metro": "0.46",
+        "idUsuario": 8,
+        "idPolideportivo": 10,
+        "idSistema_Control": 1
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 8,
+    "fields": {
+        "tipo": "Process believe color computer never although I.",
+        "estado": "Election.",
+        "metro": "0.94",
+        "idUsuario": 3,
+        "idPolideportivo": 1,
+        "idSistema_Control": 3
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 9,
+    "fields": {
+        "tipo": "Operation remain again court necessary.",
+        "estado": "Son down foot firm.",
+        "metro": "0.34",
+        "idUsuario": 10,
+        "idPolideportivo": 8,
+        "idSistema_Control": 9
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 10,
+    "fields": {
+        "tipo": "Air growth least kind produce new population.",
+        "estado": "General nation he.",
+        "metro": "0.68",
+        "idUsuario": 8,
+        "idPolideportivo": 3,
+        "idSistema_Control": 7
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 11,
+    "fields": {
+        "tipo": "Fútbol sala",
+        "estado": "Disponible",
+        "metro": "341.20",
+        "idUsuario": 31,
+        "idPolideportivo": 17,
+        "idSistema_Control": 16
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 12,
+    "fields": {
+        "tipo": "Pádel",
+        "estado": "Disponible",
+        "metro": "120.20",
+        "idUsuario": 35,
+        "idPolideportivo": 14,
+        "idSistema_Control": 12
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 13,
+    "fields": {
+        "tipo": "Tenis",
+        "estado": "Ocupada",
+        "metro": "361.90",
+        "idUsuario": 39,
+        "idPolideportivo": 16,
+        "idSistema_Control": 11
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 14,
+    "fields": {
+        "tipo": "Fútbol sala",
+        "estado": "Mantenimiento",
+        "metro": "33.30",
+        "idUsuario": 32,
+        "idPolideportivo": 11,
+        "idSistema_Control": 14
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 15,
+    "fields": {
+        "tipo": "Pádel",
+        "estado": "Ocupada",
+        "metro": "35.90",
+        "idUsuario": 31,
+        "idPolideportivo": 19,
+        "idSistema_Control": 18
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 16,
+    "fields": {
+        "tipo": "Pádel",
+        "estado": "Mantenimiento",
+        "metro": "280.70",
+        "idUsuario": 31,
+        "idPolideportivo": 11,
+        "idSistema_Control": 15
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 17,
+    "fields": {
+        "tipo": "Baloncesto",
+        "estado": "Ocupada",
+        "metro": "60.70",
+        "idUsuario": 34,
+        "idPolideportivo": 16,
+        "idSistema_Control": 14
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 18,
+    "fields": {
+        "tipo": "Fútbol sala",
+        "estado": "Mantenimiento",
+        "metro": "163.70",
+        "idUsuario": 31,
+        "idPolideportivo": 18,
+        "idSistema_Control": 19
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 19,
+    "fields": {
+        "tipo": "Tenis",
+        "estado": "Mantenimiento",
+        "metro": "34.00",
+        "idUsuario": 36,
+        "idPolideportivo": 13,
+        "idSistema_Control": 13
+    }
+},
+{
+    "model": "sportHub.pista",
+    "pk": 20,
+    "fields": {
+        "tipo": "Baloncesto",
+        "estado": "Mantenimiento",
+        "metro": "197.00",
+        "idUsuario": 37,
+        "idPolideportivo": 15,
+        "idSistema_Control": 15
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 1,
+    "fields": {
+        "descripcion": "Rise employee meet. Week white little son vote share. Strategy stand rich company pick should page.\nA on along care. Fish memory material to. Accept door employee follow work tax doctor.",
+        "num_pista": -17407,
+        "titulo": "Already it Congress figure may somebody campaign.",
+        "fecha": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 2,
+    "fields": {
+        "descripcion": "Worker phone investment moment course team light.\nMinute over however usually. Modern particularly star simply him market.",
+        "num_pista": 420,
+        "titulo": "Mother onto black region. Actually keep never forget themselves interesting.",
+        "fecha": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 3,
+    "fields": {
+        "descripcion": "Employee bed movie such any herself approach. Challenge pull environmental. Deep tend occur watch boy light simple have. Cultural many into sell last guy.",
+        "num_pista": -17274,
+        "titulo": "Truth role stock class. Car language control shake.",
+        "fecha": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 4,
+    "fields": {
+        "descripcion": "Professional quickly enter industry support. Catch south ago just prepare. Work health behind size question media.",
+        "num_pista": -17386,
+        "titulo": "Maintain item decade often history other. Rate happen camera involve. Trouble medical the learn.",
+        "fecha": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 5,
+    "fields": {
+        "descripcion": "My authority low black hotel.\nFood large stop appear since staff apply. Three season traditional night away around discover. Item decision ability evening.",
+        "num_pista": -27961,
+        "titulo": "Financial wrong oil appear. Simply century ready gas. Change have worry.",
+        "fecha": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 6,
+    "fields": {
+        "descripcion": "Administration authority worker budget.\nCulture even actually. Party eight threat national capital defense administration. Type minute garden speak investment.\nOff early range peace sell.",
+        "num_pista": -10686,
+        "titulo": "Technology huge tell produce gas.",
+        "fecha": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 7,
+    "fields": {
+        "descripcion": "Soldier blood party there site none find. Government charge off education. Protect star own guess doctor.",
+        "num_pista": -829,
+        "titulo": "Community year hard. Leave moment office. Read during consider when field information yes.",
+        "fecha": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 8,
+    "fields": {
+        "descripcion": "Few figure tough popular manager. Option operation team minute attack here Mr.\nPage whose surface. Else other if majority wish character. Quite themselves fine next write body other.",
+        "num_pista": -26434,
+        "titulo": "Opportunity blood night manage food leg foreign. Near quickly sign white final thousand artist.",
+        "fecha": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 9,
+    "fields": {
+        "descripcion": "Whether maintain worry size other. Because behind clearly factor debate film. Manage build choose white sound. Indeed design wrong huge.",
+        "num_pista": -11066,
+        "titulo": "Worker half sort visit maintain keep history. For wrong race better us.",
+        "fecha": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 10,
+    "fields": {
+        "descripcion": "Event cup southern majority serve which. Early much able remain. Phone without gun forget half alone.",
+        "num_pista": 29796,
+        "titulo": "True imagine guess. Seek my yourself Mrs address poor. Present group bit free.",
+        "fecha": "2026-10-26T11:58:47.193"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 11,
+    "fields": {
+        "descripcion": "Cambios poner niños libro pueden. Forma respecto mirada fueron tratamiento momento quién alrededor. Asunto mucho plaza.",
+        "num_pista": 20,
+        "titulo": "Piel muchos.",
+        "fecha": "2026-10-26T12:18:54.239"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 12,
+    "fields": {
+        "descripcion": "Soy con quién importancia médico partes. Cama aquel época cargo único pudo hace. Hasta oficial estar carne sabe vía.\nAquellas fin blanco centros zonas. Valores enfermedad muestra podemos.",
+        "num_pista": 19,
+        "titulo": "Idea en de domingo con.",
+        "fecha": "2026-10-26T12:18:54.243"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 13,
+    "fields": {
+        "descripcion": "Modelo unidos ideas pie asimismo. Formación posibilidades ir cómo obras quién título. Pregunta pueden salida ver.\nInforme pablo c interior país francisco centros.",
+        "num_pista": 3,
+        "titulo": "Centro tierra peor unos ningún.",
+        "fecha": "2026-10-26T12:18:54.247"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 14,
+    "fields": {
+        "descripcion": "Seguir dicen puede ahora hasta. Ninguna asimismo militar comunidad última tales. Habría cargo aumento empresa juez menos humanos.",
+        "num_pista": 13,
+        "titulo": "Atrás mientras puntos hechos.",
+        "fecha": "2026-10-26T12:18:54.250"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 15,
+    "fields": {
+        "descripcion": "Mujeres políticos debido políticas serie eso. Exterior c unidos casa trabajo frente serie minutos. Recursos amigo democracia hijos resultados.",
+        "num_pista": 3,
+        "titulo": "Frente arriba.",
+        "fecha": "2026-10-26T12:18:54.253"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 16,
+    "fields": {
+        "descripcion": "Prueba rosa el españa sería distintas líder. Juez pp entrada problemas ocasión. Nuevos he otros juan días hizo dirección.\nLenguaje qué hemos grandes fuerza mitad martín estados.",
+        "num_pista": 14,
+        "titulo": "Mesa toma república.",
+        "fecha": "2026-10-26T12:18:54.257"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 17,
+    "fields": {
+        "descripcion": "Voy presidente hora incluso. Amor base siquiera industria. Grande alto origen aumento principios.",
+        "num_pista": 14,
+        "titulo": "Así hablar mantener i.",
+        "fecha": "2026-10-26T12:18:54.260"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 18,
+    "fields": {
+        "descripcion": "Economía ocasiones proyecto manos muchas relaciones. Octubre población tipos.",
+        "num_pista": 20,
+        "titulo": "Ello antonio durante.",
+        "fecha": "2026-10-26T12:18:54.263"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 19,
+    "fields": {
+        "descripcion": "Opinión o en artículo acuerdo partido artículo. Hombre la afirmó derecha. Ambiente con sería sur según niños.",
+        "num_pista": 17,
+        "titulo": "Ahora objeto.",
+        "fecha": "2026-10-26T12:18:54.268"
+    }
+},
+{
+    "model": "sportHub.incidencia",
+    "pk": 20,
+    "fields": {
+        "descripcion": "Siquiera considera media director esto salir.\nBoca imagen alrededor tipo administración amigo. Juan sino pesar color e fácil paz. Jamás mucha personal uso españoles.",
+        "num_pista": 7,
+        "titulo": "Pone cuyo mediante.",
+        "fecha": "2026-10-26T12:18:54.272"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 1,
+    "fields": {
+        "idUsuario": null,
+        "idIncidencia": 9,
+        "fecha_resolver": "2026-10-26T11:58:47.194"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 2,
+    "fields": {
+        "idUsuario": null,
+        "idIncidencia": 8,
+        "fecha_resolver": "2026-10-26T11:58:47.194"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 3,
+    "fields": {
+        "idUsuario": null,
+        "idIncidencia": 9,
+        "fecha_resolver": "2026-10-26T11:58:47.194"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 4,
+    "fields": {
+        "idUsuario": null,
+        "idIncidencia": 8,
+        "fecha_resolver": "2026-10-26T11:58:47.194"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 5,
+    "fields": {
+        "idUsuario": null,
+        "idIncidencia": 8,
+        "fecha_resolver": "2026-10-26T11:58:47.194"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 6,
+    "fields": {
+        "idUsuario": null,
+        "idIncidencia": 1,
+        "fecha_resolver": "2026-10-26T11:58:47.194"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 7,
+    "fields": {
+        "idUsuario": null,
+        "idIncidencia": 4,
+        "fecha_resolver": "2026-10-26T11:58:47.194"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 8,
+    "fields": {
+        "idUsuario": null,
+        "idIncidencia": 7,
+        "fecha_resolver": "2026-10-26T11:58:47.194"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 9,
+    "fields": {
+        "idUsuario": null,
+        "idIncidencia": 1,
+        "fecha_resolver": "2026-10-26T11:58:47.194"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 10,
+    "fields": {
+        "idUsuario": null,
+        "idIncidencia": 4,
+        "fecha_resolver": "2026-10-26T11:58:47.194"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 11,
+    "fields": {
+        "idUsuario": 55,
+        "idIncidencia": 11,
+        "fecha_resolver": "2026-10-26T12:18:54.275"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 12,
+    "fields": {
+        "idUsuario": 58,
+        "idIncidencia": 15,
+        "fecha_resolver": "2026-10-26T12:18:54.290"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 13,
+    "fields": {
+        "idUsuario": 56,
+        "idIncidencia": 17,
+        "fecha_resolver": "2026-10-26T12:18:54.304"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 14,
+    "fields": {
+        "idUsuario": 57,
+        "idIncidencia": 15,
+        "fecha_resolver": "2026-10-26T12:18:54.319"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 15,
+    "fields": {
+        "idUsuario": 56,
+        "idIncidencia": 13,
+        "fecha_resolver": "2026-10-26T12:18:54.334"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 16,
+    "fields": {
+        "idUsuario": 52,
+        "idIncidencia": 20,
+        "fecha_resolver": "2026-10-26T12:18:54.349"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 17,
+    "fields": {
+        "idUsuario": 60,
+        "idIncidencia": 18,
+        "fecha_resolver": "2026-10-26T12:18:54.363"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 18,
+    "fields": {
+        "idUsuario": 54,
+        "idIncidencia": 14,
+        "fecha_resolver": "2026-10-26T12:18:54.378"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 19,
+    "fields": {
+        "idUsuario": 57,
+        "idIncidencia": 20,
+        "fecha_resolver": "2026-10-26T12:18:54.392"
+    }
+},
+{
+    "model": "sportHub.resuelve",
+    "pk": 20,
+    "fields": {
+        "idUsuario": 52,
+        "idIncidencia": 18,
+        "fecha_resolver": "2026-10-26T12:18:54.409"
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 1,
+    "fields": {
+        "idUsuario": 1,
+        "idNotificacion": 10
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 2,
+    "fields": {
+        "idUsuario": 3,
+        "idNotificacion": 3
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 3,
+    "fields": {
+        "idUsuario": 7,
+        "idNotificacion": 3
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 4,
+    "fields": {
+        "idUsuario": 10,
+        "idNotificacion": 4
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 5,
+    "fields": {
+        "idUsuario": 4,
+        "idNotificacion": 5
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 6,
+    "fields": {
+        "idUsuario": 9,
+        "idNotificacion": 4
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 7,
+    "fields": {
+        "idUsuario": 10,
+        "idNotificacion": 5
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 8,
+    "fields": {
+        "idUsuario": 7,
+        "idNotificacion": 1
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 9,
+    "fields": {
+        "idUsuario": 6,
+        "idNotificacion": 3
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 10,
+    "fields": {
+        "idUsuario": 2,
+        "idNotificacion": 7
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 11,
+    "fields": {
+        "idUsuario": 34,
+        "idNotificacion": 12
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 12,
+    "fields": {
+        "idUsuario": 32,
+        "idNotificacion": 17
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 13,
+    "fields": {
+        "idUsuario": 34,
+        "idNotificacion": 17
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 14,
+    "fields": {
+        "idUsuario": 34,
+        "idNotificacion": 16
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 15,
+    "fields": {
+        "idUsuario": 35,
+        "idNotificacion": 19
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 16,
+    "fields": {
+        "idUsuario": 39,
+        "idNotificacion": 12
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 17,
+    "fields": {
+        "idUsuario": 31,
+        "idNotificacion": 20
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 18,
+    "fields": {
+        "idUsuario": 34,
+        "idNotificacion": 20
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 19,
+    "fields": {
+        "idUsuario": 33,
+        "idNotificacion": 13
+    }
+},
+{
+    "model": "sportHub.recibe",
+    "pk": 20,
+    "fields": {
+        "idUsuario": 32,
+        "idNotificacion": 16
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 1,
+    "fields": {
+        "idPista": 3,
+        "idIncidencia": 6
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 2,
+    "fields": {
+        "idPista": 5,
+        "idIncidencia": 3
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 3,
+    "fields": {
+        "idPista": 4,
+        "idIncidencia": 6
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 4,
+    "fields": {
+        "idPista": 3,
+        "idIncidencia": 10
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 5,
+    "fields": {
+        "idPista": 3,
+        "idIncidencia": 4
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 6,
+    "fields": {
+        "idPista": 4,
+        "idIncidencia": 7
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 7,
+    "fields": {
+        "idPista": 2,
+        "idIncidencia": 10
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 8,
+    "fields": {
+        "idPista": 4,
+        "idIncidencia": 3
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 9,
+    "fields": {
+        "idPista": 10,
+        "idIncidencia": 10
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 10,
+    "fields": {
+        "idPista": 8,
+        "idIncidencia": 6
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 11,
+    "fields": {
+        "idPista": 18,
+        "idIncidencia": 11
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 12,
+    "fields": {
+        "idPista": 14,
+        "idIncidencia": 11
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 13,
+    "fields": {
+        "idPista": 16,
+        "idIncidencia": 14
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 14,
+    "fields": {
+        "idPista": 13,
+        "idIncidencia": 12
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 15,
+    "fields": {
+        "idPista": 19,
+        "idIncidencia": 18
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 16,
+    "fields": {
+        "idPista": 17,
+        "idIncidencia": 14
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 17,
+    "fields": {
+        "idPista": 19,
+        "idIncidencia": 12
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 18,
+    "fields": {
+        "idPista": 12,
+        "idIncidencia": 15
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 19,
+    "fields": {
+        "idPista": 14,
+        "idIncidencia": 16
+    }
+},
+{
+    "model": "sportHub.registra",
+    "pk": 20,
+    "fields": {
+        "idPista": 11,
+        "idIncidencia": 14
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 1,
+    "fields": {
+        "idUsuario": 6,
+        "idIncidencia": 2
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 2,
+    "fields": {
+        "idUsuario": 8,
+        "idIncidencia": 7
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 3,
+    "fields": {
+        "idUsuario": 5,
+        "idIncidencia": 7
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 4,
+    "fields": {
+        "idUsuario": 6,
+        "idIncidencia": 2
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 5,
+    "fields": {
+        "idUsuario": 7,
+        "idIncidencia": 2
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 6,
+    "fields": {
+        "idUsuario": 1,
+        "idIncidencia": 5
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 7,
+    "fields": {
+        "idUsuario": 10,
+        "idIncidencia": 5
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 8,
+    "fields": {
+        "idUsuario": 10,
+        "idIncidencia": 10
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 9,
+    "fields": {
+        "idUsuario": 6,
+        "idIncidencia": 9
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 10,
+    "fields": {
+        "idUsuario": 1,
+        "idIncidencia": 8
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 11,
+    "fields": {
+        "idUsuario": 38,
+        "idIncidencia": 14
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 12,
+    "fields": {
+        "idUsuario": 40,
+        "idIncidencia": 20
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 13,
+    "fields": {
+        "idUsuario": 37,
+        "idIncidencia": 12
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 14,
+    "fields": {
+        "idUsuario": 36,
+        "idIncidencia": 19
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 15,
+    "fields": {
+        "idUsuario": 40,
+        "idIncidencia": 20
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 16,
+    "fields": {
+        "idUsuario": 35,
+        "idIncidencia": 13
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 17,
+    "fields": {
+        "idUsuario": 33,
+        "idIncidencia": 16
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 18,
+    "fields": {
+        "idUsuario": 36,
+        "idIncidencia": 12
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 19,
+    "fields": {
+        "idUsuario": 39,
+        "idIncidencia": 19
+    }
+},
+{
+    "model": "sportHub.reporta",
+    "pk": 20,
+    "fields": {
+        "idUsuario": 38,
+        "idIncidencia": 13
+    }
+}
+]
