@@ -160,7 +160,6 @@ class Pista(models.Model):
 
 
 class Resuelve(models.Model):
-    """Tabla intermedia N:M Trabajador - Incidencia con atributos extra."""
     idUsuario = models.ForeignKey(Trabajador, on_delete=models.CASCADE)
     idIncidencia = models.ForeignKey(Incidencia, on_delete=models.CASCADE)
     fecha_resolver = models.DateTimeField(default=timezone.now)

@@ -112,7 +112,7 @@ class Command(BaseCommand):
             )
             sistemas.append(s)
 
-        # Crear 10 Polideportivos (1:1 con Administrador y con Direccion)
+        # Crear 10 Polideportivos 
         polideportivos = []
         for i in range(10):
             p = Polideportivo.objects.create(
@@ -123,7 +123,7 @@ class Command(BaseCommand):
             )
             polideportivos.append(p)
 
-        # Crear 10 Pistas (1:1 con Sistema_Control)
+        # Crear 10 Pistas 
         pistas = []
         for i in range(10):
             p = Pista.objects.create(
@@ -147,21 +147,16 @@ class Command(BaseCommand):
             )
             incidencias.append(i)
 
-        # Relaciones muchos a muchos (se rellenan con .add)
-
-        # Recibe: cada usuario recibe entre 1 y 3 notificaciones
         for u in usuarios:
             u.notificaciones.add(*random.sample(notificaciones, random.randint(1, 3)))
 
-        # Reporta: cada usuario reporta entre 1 y 2 incidencias
         for u in usuarios:
             u.incidencias_reportadas.add(*random.sample(incidencias, random.randint(1, 2)))
 
-        # Registra: cada pista tiene entre 1 y 3 incidencias
         for p in pistas:
             p.incidencias.add(*random.sample(incidencias, random.randint(1, 3)))
 
-        # Resuelve (tabla intermedia propia, con atributos extra)
+        # Tabla Resuelve 
         for _ in range(10):
             Resuelve.objects.create(
                 idUsuario=random.choice(trabajadores),
