@@ -1,5 +1,7 @@
 import random
+from datetime import timedelta
 from django.core.management.base import BaseCommand
+from django.utils import timezone
 from faker import Faker
 from sportHub.models import *
 
@@ -16,6 +18,7 @@ class Command(BaseCommand):
             d = Direccion.objects.create(
                 codigoPostal=random.randint(1000, 52999),
                 ciudad=fake.city(),
+                provincia=random.choice(['Sevilla', 'Madrid', 'Barcelona', 'Valencia', 'Málaga']),
                 calleNumero=fake.street_address()
             )
             direcciones.append(d)
@@ -23,8 +26,13 @@ class Command(BaseCommand):
         # Crear 10 Descuentos
         descuentos = []
         for _ in range(10):
+            inicio = fake.date_between(start_date='-1y', end_date='today')
             d = Descuento.objects.create(
-                porcentaje=random.randint(5, 50)
+                porcentaje=random.randint(5, 50),
+                codigo=fake.unique.bothify('DESC-????-####').upper(),
+                fechaInicio=inicio,
+                fechaFin=inicio + timedelta(days=random.randint(30, 365)),
+                activo=fake.boolean()
             )
             descuentos.append(d)
 
@@ -32,7 +40,7 @@ class Command(BaseCommand):
         usuarios = []
         for _ in range(10):
             u = Usuario.objects.create(
-                nombreUsuario=fake.user_name()[:20],
+                nombreUsuario=fake.unique.user_name()[:20],
                 nombre=fake.first_name(),
                 apellidos=fake.last_name(),
                 correoElectronico=fake.unique.email(),
@@ -47,7 +55,7 @@ class Command(BaseCommand):
         administradores = []
         for _ in range(10):
             a = Administrador.objects.create(
-                nombreUsuario=fake.user_name()[:20],
+                nombreUsuario=fake.unique.user_name()[:20],
                 nombre=fake.first_name(),
                 apellidos=fake.last_name(),
                 correoElectronico=fake.unique.email(),
@@ -55,7 +63,9 @@ class Command(BaseCommand):
                 contrasenia=fake.unique.sha256(),
                 telefono=random.randint(600000000, 699999999),
                 fechaAlta=fake.date_between(start_date='-2y', end_date='today'),
-                cargo=fake.job()[:50]
+                cargo=fake.job()[:50],
+                nivelAcceso=random.choice([1, 2, 3]),
+                fechaNombramiento=fake.date_between(start_date='-3y', end_date='today')
             )
             administradores.append(a)
 
@@ -63,7 +73,7 @@ class Command(BaseCommand):
         trabajadores = []
         for _ in range(10):
             t = Trabajador.objects.create(
-                nombreUsuario=fake.user_name()[:20],
+                nombreUsuario=fake.unique.user_name()[:20],
                 nombre=fake.first_name(),
                 apellidos=fake.last_name(),
                 correoElectronico=fake.unique.email(),
@@ -71,8 +81,8 @@ class Command(BaseCommand):
                 contrasenia=fake.unique.sha256(),
                 telefono=random.randint(600000000, 699999999),
                 fechaAlta=fake.date_between(start_date='-2y', end_date='today'),
-                CodigoDescuento=fake.unique.bothify('DESC-????-####').upper(),
-                Puesto=fake.job()[:50],
+                codigoDescuento=fake.unique.bothify('TRAB-????-####').upper(),
+                puesto=fake.job()[:50],
                 fechaContratacion=fake.date_between(start_date='-5y', end_date='today'),
                 descuento=random.choice(descuentos)
             )
@@ -82,10 +92,12 @@ class Command(BaseCommand):
         tipos = ["RESER", "ANUL", "REGIST"]
         notificaciones = []
         for _ in range(10):
+            leida = fake.boolean()
             n = Notificacion.objects.create(
                 tipo=random.choice(tipos),
                 mensaje=fake.sentence(nb_words=10),
-                leida=fake.boolean()
+                leida=leida,
+                fecha_lectura=timezone.now() if leida else None
             )
             notificaciones.append(n)
 
@@ -95,30 +107,33 @@ class Command(BaseCommand):
             s = Sistema_Control.objects.create(
                 num_serie=random.randint(1000, 999999),
                 direccion_IP=fake.ipv4(),
-                modelo_fabricante=fake.bothify('???###').upper()
+                modelo_fabricante=fake.bothify('???###').upper(),
+                fecha_instalacion=fake.date_between(start_date='-3y', end_date='today')
             )
             sistemas.append(s)
 
-        # Crear 10 Polideportivos
+        # Crear 10 Polideportivos (1:1 con Administrador y con Direccion)
         polideportivos = []
         for i in range(10):
             p = Polideportivo.objects.create(
                 nombre='Polideportivo ' + fake.last_name(),
-                idUsuario=random.choice(administradores),
+                descripcion=fake.text(max_nb_chars=150),
+                idUsuario=administradores[i],
                 idDireccion=direcciones[i]
             )
             polideportivos.append(p)
 
-        # Crear 10 Pistas
+        # Crear 10 Pistas (1:1 con Sistema_Control)
         pistas = []
-        for _ in range(10):
+        for i in range(10):
             p = Pista.objects.create(
                 tipo=random.choice(["Tenis", "Pádel", "Baloncesto", "Fútbol sala"]),
-                estado=random.choice(["Disponible", "Ocupada", "Mantenimiento"]),
+                estado=random.choice(["DISP", "OCUP", "MANT"]),
                 metro=random.randint(100, 4000) / 10,
+                precioHora=random.randint(8, 30),
                 idUsuario=random.choice(usuarios),
                 idPolideportivo=random.choice(polideportivos),
-                idSistema_Control=random.choice(sistemas)
+                idSistema_Control=sistemas[i]
             )
             pistas.append(p)
 
@@ -132,23 +147,26 @@ class Command(BaseCommand):
             )
             incidencias.append(i)
 
-        # Tablas intermedias
+        # Relaciones muchos a muchos (se rellenan con .add)
+
+        # Recibe: cada usuario recibe entre 1 y 3 notificaciones
+        for u in usuarios:
+            u.notificaciones.add(*random.sample(notificaciones, random.randint(1, 3)))
+
+        # Reporta: cada usuario reporta entre 1 y 2 incidencias
+        for u in usuarios:
+            u.incidencias_reportadas.add(*random.sample(incidencias, random.randint(1, 2)))
+
+        # Registra: cada pista tiene entre 1 y 3 incidencias
+        for p in pistas:
+            p.incidencias.add(*random.sample(incidencias, random.randint(1, 3)))
+
+        # Resuelve (tabla intermedia propia, con atributos extra)
         for _ in range(10):
             Resuelve.objects.create(
                 idUsuario=random.choice(trabajadores),
-                idIncidencia=random.choice(incidencias)
-            )
-            Recibe.objects.create(
-                idUsuario=random.choice(usuarios),
-                idNotificacion=random.choice(notificaciones)
-            )
-            Registra.objects.create(
-                idPista=random.choice(pistas),
-                idIncidencia=random.choice(incidencias)
-            )
-            Reporta.objects.create(
-                idUsuario=random.choice(usuarios),
-                idIncidencia=random.choice(incidencias)
+                idIncidencia=random.choice(incidencias),
+                observaciones=fake.sentence(nb_words=8)
             )
 
         self.stdout.write(self.style.SUCCESS('Datos generados correctamente'))

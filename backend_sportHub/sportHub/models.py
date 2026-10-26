@@ -1,165 +1,171 @@
+from datetime import date, time
 from django.db import models
 from django.utils import timezone
-from datetime import time
 
-class Usuario (models.Model):
+
+class Usuario(models.Model):
     idUsuario = models.AutoField(primary_key=True)
-    nombreUsuario = models.CharField(max_length=20)
+    nombreUsuario = models.CharField(max_length=20, unique=True)
     nombre = models.CharField(max_length=20)
     apellidos = models.CharField(max_length=50)
-    correoElectronico = models.CharField(max_length=200,unique=True)
-    dni = models.CharField(max_length=9, unique= True)
-    contrasenia = models.CharField(max_length=128, unique=True)
-    telefono = models.IntegerField()
-    fechaAlta = models.DateField()
-    
-    def publish(self):
-            self.fecha_envio = timezone.now()
-            self.save()
-        
-    def publish(self):
-            self.fecha_lectura = timezone.now()
-            self.save()
-        
+    correoElectronico = models.EmailField(max_length=200, unique=True)
+    dni = models.CharField(max_length=9, unique=True)
+    contrasenia = models.CharField(max_length=128, help_text="Contraseña cifrada")
+    telefono = models.IntegerField(null=True, blank=True)
+    fechaAlta = models.DateField(default=date.today)
+
+    # N:M Recibe
+    notificaciones = models.ManyToManyField(
+        'Notificacion', related_name='destinatarios', blank=True
+    )
+    # N:M  Reporta 
+    incidencias_reportadas = models.ManyToManyField(
+        'Incidencia', related_name='reportada_por', blank=True
+    )
+
     def __str__(self):
-        return "Id: " + self.idUsuario + " Nombre Usuario: " + self.nombreUsuario + " Nombre: " + self.nombre + " Apellidos: " + self.apellidos + " Correo Eelectronico: " + self.correoElectronico + " DNI: " + self.dni +" Contraseña: " + self.contrasenia + " Telefono: " + self.telefono + " Fecha de alta: " + self.fechaAlta
+        return f"{self.nombreUsuario} ({self.nombre} {self.apellidos}) - DNI: {self.dni}"
 
 
-            
-class Administrador (Usuario):
+class Administrador(Usuario):
     cargo = models.CharField(max_length=50)
-        
-    def __str__(self):
-         return {super().__str__()} + " Cargo: " +  self.cargo
- 
-    
-class Direccion (models.Model):
-    idDireccion = models.AutoField(primary_key=True)
-    codigoPostal = models.IntegerField()
-    ciudad = models.CharField(max_length=50)
-    calleNumero = models.TextField()
+    nivelAcceso = models.IntegerField(default=1, choices=[(1, "Básico"), (2, "Medio"), (3, "Total")])
+    fechaNombramiento = models.DateField(default=date.today)
 
-    
     def __str__(self):
-        return "Id: " + self.idDireccion + " Codigo Postal: " + self.codigoPostal + " Ciudad: " + self.ciudad + " Calle y numero: " + self.calleNumero
+        return f"{super().__str__()} - Cargo: {self.cargo}"
+
 
 class Descuento(models.Model):
     idDescuento = models.AutoField(primary_key=True)
     porcentaje = models.DecimalField(max_digits=5, decimal_places=2)
-    
+    codigo = models.CharField(max_length=20, unique=True)
+    fechaInicio = models.DateField(default=date.today)
+    fechaFin = models.DateField(null=True, blank=True)
+    activo = models.BooleanField(default=True)
+
     def __str__(self):
-        return f"Descuento {self.idDescuento}: {self.porcentaje}%"
+        return f"Descuento {self.codigo}: {self.porcentaje}%"
 
 
 class Trabajador(Usuario):
-    CodigoDescuento = models.CharField(max_length=20, unique=True)
-    Puesto = models.CharField(max_length=50)
+    codigoDescuento = models.CharField(max_length=20, unique=True)
+    puesto = models.CharField(max_length=50)
     fechaContratacion = models.DateField()
-    descuento = models.ForeignKey(Descuento, on_delete=models.CASCADE,related_name='trabajadores')
-    
+    # 1:N  Aplica
+    descuento = models.ForeignKey(Descuento, on_delete=models.CASCADE, related_name='trabajadores')
+    # N:M Resuelve 
+    incidencias_resueltas = models.ManyToManyField(
+        'Incidencia', through='Resuelve', related_name='resolutores', blank=True
+    )
+
     def __str__(self):
-        return {super().__str__()} + " Puesto: " + self.Puesto + " Fecha de Contratacion: " + self.fechaContratacion + " Codigo de descuento" + self.CodigoDescuento
-    
-    
-class Notificacion (models.Model):
-    notificaciones=[
+        return f"{super().__str__()} - Puesto: {self.puesto}"
+
+
+class Direccion(models.Model):
+    idDireccion = models.AutoField(primary_key=True)
+    codigoPostal = models.IntegerField()
+    ciudad = models.CharField(max_length=50)
+    provincia = models.CharField(max_length=50, blank=True)
+    calleNumero = models.TextField()
+
+    def __str__(self):
+        return f"{self.calleNumero}, {self.codigoPostal} {self.ciudad}"
+
+
+class Notificacion(models.Model):
+    TIPOS = [
         ("RESER", "Reserva"),
         ("ANUL", "Anular"),
         ("REGIST", "Registrado"),
     ]
     idNotificacion = models.AutoField(primary_key=True)
-    tipo = models.CharField( max_length=50, choices=notificaciones, default="RESER")
-    mensaje= models.TextField()
-    fecha_envio=models.DateTimeField(default=timezone.now)
-    leida=models.BooleanField(default=False)
-    fecha_lectura=models.DateTimeField(default=timezone.now)
-    
-    def publish(self):
-        self.fecha_envio = timezone.now()
-        self.save()
-    
-    def publish(self):
+    tipo = models.CharField(max_length=50, choices=TIPOS, default="RESER")
+    mensaje = models.TextField()
+    fecha_envio = models.DateTimeField(default=timezone.now)
+    leida = models.BooleanField(default=False)
+    fecha_lectura = models.DateTimeField(null=True, blank=True)
+
+    def marcar_leida(self):
+        self.leida = True
         self.fecha_lectura = timezone.now()
         self.save()
-    
-    def __str__ (self):
-        return  "ID= "+self.idNotificacion+"Tipo notifiacion: "+self.tipo+ ", Mensaje: "+self.mensaje+ ", Fecha de envio: "+ self.fecha_envio+ ", Estado: "+self.estado+ ", Fecha de lectura: "+self.fecha_lectura
+
+    def __str__(self):
+        return f"[{self.tipo}] {self.mensaje[:40]}"
 
 
 class Sistema_Control(models.Model):
-    idSistema_Control= models.AutoField(primary_key=True)
-    num_serie=models.IntegerField(default=0)
-    direccion_IP=models.GenericIPAddressField()
-    modelo_fabricante=models.CharField(max_length=6)
-    
-    def __str__ (self):
-        return "ID: "+self.idSistema_Control+"Numero de serie: "+self.num_serie+ ", Dirección IP: "+self.direccion_IP+ ", Modelo de fabricante: "+ self.modelo_fabricante
-
-    
-class Polideportivo(models.Model):
-    idPolideportivo =models.AutoField(primary_key=True)
-    nombre= models.CharField(max_length=50)
-    hora_apertura= models.TimeField(default=time(9, 0))
-    hora_cierre= models.TimeField(default=time(22, 0))
-    idUsuario=models.ForeignKey(Administrador, on_delete=models.CASCADE)
-    idDireccion=models.OneToOneField(Direccion, on_delete=models.CASCADE)
-
-    def __str__ (self):
-        return "ID: "+self.idPolideportivo+"Nombre: "+self.nombre+ ", Hora de apertura: "+self.hora_apertura+ ", Hora de cierre: "+ self.hora_cierre+ ", Id Usuario: "+self.idUsuario+ ", Id Direccion: "+self.idDireccion
-
-class Pista(models.Model):
-    idPista = models.AutoField(primary_key=True)
-    tipo = models.CharField(max_length=50)  
-    estado = models.CharField(max_length=20)  
-    metro = models.DecimalField(max_digits=6, decimal_places=2)
-    idUsuario = models.ForeignKey(Usuario,on_delete=models.CASCADE)
-    idPolideportivo = models.ForeignKey(Polideportivo,on_delete=models.CASCADE)
-    idSistema_Control = models.ForeignKey(Sistema_Control,on_delete=models.CASCADE)
+    idSistema_Control = models.AutoField(primary_key=True)
+    num_serie = models.IntegerField(default=0, db_column='numero_serie')
+    direccion_IP = models.GenericIPAddressField()
+    modelo_fabricante = models.CharField(max_length=6)
+    fecha_instalacion = models.DateField(default=date.today)
 
     def __str__(self):
-        return "Pista: " + self.idPista + " Tipo: " + self.tipo + " Estado: " + self.estado
+        return f"Sistema {self.modelo_fabricante} (serie {self.num_serie}, IP {self.direccion_IP})"
+
+
+class Polideportivo(models.Model):
+    idPolideportivo = models.AutoField(primary_key=True)
+    nombre = models.CharField(max_length=50)
+    descripcion = models.TextField(blank=True)
+    hora_apertura = models.TimeField(default=time(9, 0))
+    hora_cierre = models.TimeField(default=time(22, 0))
+    # 1:1  Gestiona 
+    idUsuario = models.OneToOneField(Administrador, on_delete=models.CASCADE, related_name='polideportivo')
+    # 1:1  Localiza
+    idDireccion = models.OneToOneField(Direccion, on_delete=models.CASCADE, related_name='polideportivo')
+
+    def __str__(self):
+        return f"{self.nombre} ({self.hora_apertura:%H:%M}-{self.hora_cierre:%H:%M})"
+
 
 class Incidencia(models.Model):
     idIncidencia = models.AutoField(primary_key=True)
+    titulo = models.CharField(max_length=100)
     descripcion = models.TextField()
     num_pista = models.IntegerField()
-    titulo = models.CharField(max_length=100)
     fecha = models.DateTimeField(default=timezone.now)
-    
-    def publish(self):
-        self.fecha = timezone.now()
-        self.save()
 
     def __str__(self):
-        return "idIncidencia" + self.idIncidencia + " Incidencia" + self.titulo + " Descripcion: " + self.descripcion + "Numero de pista: " + self.num_pista + "Fecha: " +  self.fecha
+        return f"Incidencia {self.idIncidencia}: {self.titulo} (pista {self.num_pista})"
+
+
+class Pista(models.Model):
+    ESTADOS = [
+        ("DISP", "Disponible"),
+        ("OCUP", "Ocupada"),
+        ("MANT", "Mantenimiento"),
+    ]
+    idPista = models.AutoField(primary_key=True)
+    tipo = models.CharField(max_length=50)
+    estado = models.CharField(max_length=20, choices=ESTADOS, default="DISP")
+    metro = models.DecimalField(max_digits=6, decimal_places=2)
+    precioHora = models.DecimalField(max_digits=6, decimal_places=2, default=10)
+    # 1:N  Reserva 
+    idUsuario = models.ForeignKey(
+        Usuario, on_delete=models.SET_NULL, null=True, blank=True, related_name='pistas_reservadas'
+    )
+    # 1:N  Contiene 
+    idPolideportivo = models.ForeignKey(Polideportivo, on_delete=models.CASCADE, related_name='pistas')
+    # 1:1  Pertenece 
+    idSistema_Control = models.OneToOneField(Sistema_Control, on_delete=models.CASCADE, related_name='pista')
+    # N:M  Registra 
+    incidencias = models.ManyToManyField(Incidencia, related_name='pistas', blank=True)
+
+    def __str__(self):
+        return f"Pista {self.idPista}: {self.tipo} ({self.get_estado_display()})"
+
 
 class Resuelve(models.Model):
-    idUsuario=models.ForeignKey(Trabajador, on_delete=models.SET_NULL, null=True, blank=True)
-    idIncidencia=models.ForeignKey(Incidencia, on_delete=models.CASCADE)
-    fecha_resolver=models.DateTimeField(default=timezone.now)
-    
-    def __str__(self):
-        return "ID Usuario: "+self.idUsuario+ ", ID Incidencia: "+self.idIncidencia+ " , Resuelta: "+self.fecha_resolver
-
-class Recibe(models.Model):
-    idUsuario = models.ForeignKey(Usuario,on_delete=models.CASCADE)
-    idNotificacion = models.ForeignKey(Notificacion,on_delete=models.CASCADE)
-
-    def __str__(self):
-        return "Usuario" + self.idUsuario + " Notificación: " + self.idNotificacion
-    
-class Registra(models.Model):
-    idPista = models.ForeignKey(Pista,on_delete=models.CASCADE)
-    idIncidencia = models.ForeignKey(Incidencia,on_delete=models.CASCADE)
-    
-    def __str__(self):
-        return "ID Pista" + self.idPista + " ID Incidencia: " + self.idIncidencia
-
-class Reporta (models.Model):
-    idUsuario = models.ForeignKey(Usuario,on_delete=models.CASCADE,)
+    """Tabla intermedia N:M Trabajador - Incidencia con atributos extra."""
+    idUsuario = models.ForeignKey(Trabajador, on_delete=models.CASCADE)
     idIncidencia = models.ForeignKey(Incidencia, on_delete=models.CASCADE)
-
+    fecha_resolver = models.DateTimeField(default=timezone.now)
+    observaciones = models.TextField(blank=True)
 
     def __str__(self):
-        return "Usuario" + self.idUsuario + " Incidencia: " + self.idIncidencia
-        
+        return f"{self.idUsuario.nombreUsuario} resolvió la incidencia {self.idIncidencia_id}"
+   
