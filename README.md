@@ -12,42 +12,60 @@ SportHub es una aplicación web para gestionar y reservar pistas deportivas de p
 En el documento entregado junto a este archivo
 
 ## 3. Modelos y atributos
-Todas las claves primarias son `AutoField(primary_key=True)` (`idUsuario`, `idPista`) y no se repiten en las tablas.
+Todas las claves primarias son **`AutoField*(primary_key=True)` (`idUsuario`, `idPista`) y no se repiten en las tablas.
 
 | Modelo | Qué es | Atributos (tipo) |
-|---|---|---|
-| **Usuario** | Persona registrada | `nombreUsuario` (Char), `nombre` (Char), `apellidos` (Char), `correoElectronico` (Email), `dni` (Char), `contrasenia` (Char), `telefono` (Integer), `fechaAlta` (Date) |
-| **Administrador** | Hereda de Usuario; gestiona un polideportivo | `cargo` (Char), `nivelAcceso` (Integer), `fechaNombramiento` (Date) |
-| **Trabajador** | Hereda de Usuario; resuelve incidencias | `codigoDescuento` (Char), `puesto` (Char), `fechaContratacion` (Date) |
-| **Descuento** | Descuento para trabajadores | `porcentaje` (Decimal), `codigo` (Char), `fechaInicio` (Date), `fechaFin` (Date), `activo` (Boolean) |
-| **Direccion** | Dirección de un polideportivo | `codigoPostal` (Integer), `ciudad` (Char), `provincia` (Char), `calleNumero` (Text) |
-| **Notificacion** | Aviso a usuarios | `tipo` (Char), `mensaje` (Text), `fecha_envio` (DateTime), `leida` (Boolean), `fecha_lectura` (DateTime) |
-| **Sistema_Control** | Dispositivo de control de una pista | `num_serie` (Integer), `direccion_IP` (GenericIPAddress), `modelo_fabricante` (Char), `fecha_instalacion` (Date) |
-| **Polideportivo** | Instalación deportiva | `nombre` (Char), `descripcion` (Text), `hora_apertura` (Time), `hora_cierre` (Time) |
-| **Incidencia** | Problema en una pista | `titulo` (Char), `descripcion` (Text), `num_pista` (Integer), `fecha` (DateTime) |
-| **Pista** | Pista reservable | `tipo` (Char), `estado` (Char), `metro` (Decimal), `precioHora` (Decimal) |
-| **Resuelve** | Tabla intermedia Trabajador–Incidencia | `fecha_resolver` (DateTime), `observaciones` (Text) |
+
+**Usuario** | Persona registrada | `nombreUsuario` (Char), `nombre` (Char), `apellidos` (Char), `correoElectronico` (Email), `dni` (Char), `contrasenia` (Char), `telefono` (Integer), `fechaAlta` (Date) 
+
+**Administrador** | Hereda de Usuario; gestiona un polideportivo | `cargo` (Char), `nivelAcceso` (Integer), `fechaNombramiento` (Date) 
+
+**Trabajador** | Hereda de Usuario; resuelve incidencias | `codigoDescuento` (Char), `puesto` (Char), `fechaContratacion` (Date)
+
+**Descuento** | Descuento para trabajadores | `porcentaje` (Decimal), `codigo` (Char), `fechaInicio` (Date), `fechaFin` (Date), `activo` (Boolean)
+
+**Direccion** | Dirección de un polideportivo | `codigoPostal` (Integer), `ciudad` (Char), `provincia` (Char), `calleNumero` (Text)
+
+**Notificacion** | Aviso a usuarios | `tipo` (Char), `mensaje` (Text), `fecha_envio` (DateTime), `leida` (Boolean), `fecha_lectura` (DateTime)
+
+**Sistema_Control** | Dispositivo de control de una pista | `num_serie` (Integer), `direccion_IP` (GenericIPAddress), `modelo_fabricante` (Char), `fecha_instalacion` (Date)
+
+**Polideportivo** | Instalación deportiva | `nombre` (Char), `descripcion` (Text), `hora_apertura` (Time), `hora_cierre` (Time)
+
+**Incidencia** | Problema en una pista | `titulo` (Char), `descripcion` (Text), `num_pista` (Integer), `fecha` (DateTime)
+
+**Pista** | Pista reservable | `tipo` (Char), `estado` (Char), `metro` (Decimal), `precioHora` (Decimal)
+
+**Resuelve** | Tabla intermedia Trabajador–Incidencia | `fecha_resolver` (DateTime), `observaciones` (Text)
 
 ### Relaciones
 
 | Tipo | Relación | Campo |
-|---|---|---|
 | **OneToOne** | Polideportivo – Administrador | `Polideportivo.idUsuario` |
+
 | **OneToOne** | Polideportivo – Direccion | `Polideportivo.idDireccion` |
+
 | **OneToOne** | Pista – Sistema_Control | `Pista.idSistema_Control` |
+
 | **ManyToOne** | Trabajador → Descuento | `Trabajador.descuento` |
+
 | **ManyToOne** | Pista → Polideportivo | `Pista.idPolideportivo` |
+
 | **ManyToOne** | Pista → Usuario | `Pista.idUsuario` |
+
 | **ManyToMany** | Usuario – Notificacion | `Usuario.notificaciones` |
+
 | **ManyToMany** | Usuario – Incidencia | `Usuario.incidencias_reportadas` |
+
 | **ManyToMany** | Pista – Incidencia | `Pista.incidencias` |
+
 | **ManyToMany** (tabla intermedia con atributos extra) | Trabajador – Incidencia | `Trabajador.incidencias_resueltas` → `Resuelve` (`fecha_resolver`, `observaciones`) |
 
 ### Tipos de campo usados 
 
 | Tipo | Para qué sirve |
 |---|---|
-| `AutoField` | Entero que se autoincrementa (claves primarias) |
+| `AutoField` | Entero que se autoincrementa  |
 | `CharField` | Texto corto de longitud limitada |
 | `TextField` | Texto largo |
 | `EmailField` | Texto que valida que sea un email |
