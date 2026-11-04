@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polideportivo</title>
+</head>
+<body>
+    <h1>Polideportivos</h1>
+
+    {% if polideportivo %}
+        {% for p in polideportivo %}
+            <section>
+                <h2>{{ p.nombre }}</h2>
+
+                {% if p.descripcion %}
+                    <p>{{ p.descripcion }}</p>
+                {% endif %}
+
+                <p><strong>Horario:</strong> {{ p.hora_apertura|time:"H:i" }} - {{ p.hora_cierre|time:"H:i" }}</p>
+
+                <h3>Dirección</h3>
+                <p>
+                    {{ p.idDireccion.calleNumero }}<br>
+                    {{ p.idDireccion.codigoPostal }} {{ p.idDireccion.ciudad }}
+                    {% if p.idDireccion.provincia %}({{ p.idDireccion.provincia }}){% endif %}
+                </p>
+
+                <h3>Administrador</h3>
+                <p>
+                    {{ p.idUsuario.nombre }} {{ p.idUsuario.apellidos }}<br>
+                    <strong>Cargo:</strong> {{ p.idUsuario.cargo }}<br>
+                    <strong>Nivel de acceso:</strong> {{ p.idUsuario.get_nivelAcceso_display }}<br>
+                    <strong>Correo:</strong> {{ p.idUsuario.correoElectronico }}
+                </p>
+            </section>
+            {% if not forloop.last %}<hr>{% endif %}
+        {% endfor %}
+    {% else %}
+        <p>No se ha encontrado ningún polideportivo para ese administrador y ciudad.</p>
+    {% endif %}
+
+    <p><a href="{% url 'index' %}">Volver al inicio</a></p>
+</body>
+</html>
