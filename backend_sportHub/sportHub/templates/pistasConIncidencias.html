@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Pistas con incidencias</title>
+</head>
+<body>
+    <h1>Pistas con incidencias que contienen "{{ texto }}"</h1>
+
+    {% for pista in pistas %}
+        <h2>Pista {{ pista.idPista }}: {{ pista.tipo }} ({{ pista.get_estado_display }})</h2>
+        <ul>
+            {% for incidencia in pista.incidencias.all %}
+                <li>
+                    <strong>{{ incidencia.titulo }}</strong> - {{ incidencia.descripcion }}
+                    ({{ incidencia.fecha|date:"d/m/Y H:i" }})
+                </li>
+            {% endfor %}
+        </ul>
+    {% empty %}
+        <p>No hay pistas con incidencias que coincidan.</p>
+    {% endfor %}
+
+    <p><a href="{% url 'index' %}">Volver al inicio</a></p>
+</body>
+</html>
