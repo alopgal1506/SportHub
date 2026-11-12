@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Incidencias del año {{ ano }}</title>
+</head>
+<body>
+    <h1>Incidencias del año {{ ano }}</h1>
+
+    {% if incidencias %}
+        <p>Total de incidencias encontradas: {{ incidencias|length }}</p>
+        <hr>
+
+        {% for incidencia in incidencias %}
+            <h3>Incidencia {{ incidencia.idIncidencia }}: {{ incidencia.titulo }}</h3>
+            <p><strong>Descripción:</strong> {{ incidencia.descripcion }}</p>
+            <p><strong>Número de pista:</strong> {{ incidencia.num_pista }}</p>
+            <p><strong>Fecha:</strong> {{ incidencia.fecha|date:"d/m/Y H:i" }}</p>
+            
+            <h4>Pistas relacionadas:</h4>
+            {% if incidencia.pistas.all %}
+                <ul>
+                    {% for pista in incidencia.pistas.all %}
+                        <li>
+                            <strong>Pista {{ pista.idPista }}</strong> - Tipo: {{ pista.tipo }} | Estado: {{ pista.get_estado_display }} | Metros: {{ pista.metro }} | Precio/hora: {{ pista.precioHora }}€
+                            
+                            <!-- Información de los modelos relacionados -->
+                            {% if pista.idPolideportivo %}
+                                <br>Polideportivo: {{ pista.idPolideportivo.nombre }}
+                            {% endif %}
+                            
+                            {% if pista.idSistema_Control %}
+                                <br>Sistema de Control: {{ pista.idSistema_Control.modelo_fabricante }} (IP: {{ pista.idSistema_Control.direccion_IP }})
+                            {% endif %}
+                            
+                            {% if pista.idUsuario %}
+                                <br>Usuario: {{ pista.idUsuario.nombreUsuario }}
+                            {% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p><em>Esta incidencia no tiene pistas asociadas.</em></p>
+            {% endif %}
+            <hr>
+        {% endfor %}
+    {% else %}
+        <p>No hay incidencias registradas para el año {{ ano }}.</p>
+    {% endif %}
+
+    <br>
+    <a href="{% url 'index' %}">Volver al inicio</a>
+</body>
+</html>
