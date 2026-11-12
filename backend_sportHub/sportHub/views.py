@@ -9,3 +9,13 @@ def index(request):
 def polideportivo(requets, idAdmin, nombreCiudad):
     polideportivo = Polideportivo.objects.select_related('idUsuario', 'idDireccion').filter(idUsuario = idAdmin, idDireccion__ciudad=nombreCiudad)
     return render(requets, 'polideportivo.html', {'polideportivo': polideportivo})
+
+"""
+def polideportivo(request, idAdmin, nombreCiudad):
+    polideportivo = Polideportivo.objects.raw(
+        "SELECT * FROM Polideportivo WHERE idUsuario_id = %s AND idDireccion_id IN (SELECT idDireccion FROM Direccion WHERE ciudad = %s)",
+        [idAdmin, nombreCiudad]
+    )
+    return render(request, 'polideportivo.html', {'polideportivo': polideportivo})
+
+"""
