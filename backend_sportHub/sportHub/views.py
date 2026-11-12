@@ -13,3 +13,17 @@ def trabajadores_incidencias(request):
     return render(request, 'trabajadores_incidencias.html', {
         'trabajadores': trabajadores
     })
+    
+"""
+def trabajadores_incidencias(request):
+    trabajadores = Trabajador.objects.raw(
+        "SELECT Usuario.* FROM Usuario "
+        "INNER JOIN Trabajador ON Usuario.idUsuario = Trabajador.usuario_ptr_id "
+        "INNER JOIN Resuelve ON Trabajador.usuario_ptr_id = Resuelve.idUsuario_id"
+    )
+
+    return render(request, 'trabajadores_incidencias.html', {
+        'trabajadores': trabajadores
+    })   
+
+"""
