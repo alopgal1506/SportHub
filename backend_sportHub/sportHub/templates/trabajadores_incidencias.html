@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajadores e incidencias</title>
+</head>
+<body>
+
+    <h1>Trabajadores e incidencias resueltas</h1>
+
+    {% if trabajadores %}
+        {% for trabajador in trabajadores %}
+            <h2>{{ trabajador.nombre }} {{ trabajador.apellidos }}</h2>
+
+            <p>Puesto: {{ trabajador.puesto }}</p>
+
+            <h3>Incidencias resueltas:</h3>
+
+            {% for incidencia in trabajador.incidencias_resueltas.all %}
+                <p>Título: {{ incidencia.titulo }}</p>
+                <p>Descripción: {{ incidencia.descripcion }}</p>
+                <p>Número de pista: {{ incidencia.num_pista }}</p>
+            {% empty %}
+                <p>Este trabajador no ha resuelto ninguna incidencia.</p>
+            {% endfor %}
+
+        {% endfor %}
+    {% else %}
+        <p>No hay trabajadores registrados.</p>
+    {% endif %}
+
+</body>
+</html>
