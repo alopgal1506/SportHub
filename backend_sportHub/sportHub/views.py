@@ -13,3 +13,12 @@ def listaPrecios(request):
     minimo = precio["precioHora__min"]
     total = precio["idPista__count"]
     return render(request, 'listaPrecios.html', {"media": media,"maximo": maximo,"minimo": minimo,"total": total,})
+
+"""
+    SELECT 
+    AVG(precioHora) AS media,
+    MAX(precioHora) AS maximo,
+    MIN(precioHora) AS minimo,
+    COUNT(idPista) AS total
+    FROM Pista;
+"""
