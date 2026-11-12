@@ -8,3 +8,12 @@ def index(request):
 def pistasFiltradas(request, nuevoTipo ,nuevoEstado):
     pistas = Pista.objects.filter(tipo=nuevoTipo,estado=nuevoEstado)
     return render(request,'pistasFiltradas.html', {'pistas':pistas})
+
+"""
+    def pistasFiltradas(request, nuevoTipo, nuevoEstado):
+    pistas = Pista.objects.raw(
+        "SELECT * FROM Pista WHERE tipo = %s AND estado = %s",
+        [nuevoTipo, nuevoEstado]
+    )
+    return render(request, 'pistasFiltradas.html', {'pistas': pistas})
+"""
