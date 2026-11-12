@@ -13,4 +13,13 @@ def incidencias_sin_resolver(request):
         'incidencias': incidencias
     })
     
-    
+"""
+    def incidencias_sin_resolver(request):
+    incidencias = Incidencia.objects.raw(
+        "SELECT * FROM Incidencia WHERE idIncidencia NOT IN (SELECT idIncidencia_id FROM Resuelve)"
+    )
+
+    return render(request, 'incidencias_sin_resolver.html', {
+        'incidencias': incidencias
+    })
+"""
