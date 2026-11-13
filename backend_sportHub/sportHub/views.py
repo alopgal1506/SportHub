@@ -7,7 +7,6 @@ from .models import Pista, Polideportivo, Usuario, Administrador, Direccion, Inc
 from django.db.models import Q
 from django.db.models import Prefetch
 
-
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -98,6 +97,25 @@ def incidenciasPorAno(request, ano):
     
 """
 
+    # Precio AVG, MAX, MIN y el count de las pistas
+def listaPrecios(request):
+    precio = Pista.objects.aggregate(Avg("precioHora"), Max("precioHora"), Min("precioHora"), Count("idPista"))
+    media = precio["precioHora__avg"]
+    maximo = precio["precioHora__max"]
+    minimo = precio["precioHora__min"]
+    total = precio["idPista__count"]
+    return render(request, 'listaPrecios.html', {"media": media,"maximo": maximo,"minimo": minimo,"total": total,})
+
+"""
+    SELECT 
+    AVG(precioHora) AS media,
+    MAX(precioHora) AS maximo,
+    MIN(precioHora) AS minimo,
+    COUNT(idPista) AS total
+    FROM Pista;
+"""
+
+
 def mi_error_400(request,exception=None):
     return render(request, 'errores/400.html',None,None,400)
 
@@ -125,6 +143,7 @@ def probar_404(request):
 def probar_500(request):
     resultado = 1 / 0  # Esto fuerza un error 500 
     return render(request, 'inicio.html')
+
 
 
 
