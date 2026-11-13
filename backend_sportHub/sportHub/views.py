@@ -33,14 +33,19 @@ def polideportivo(requets, idAdmin, nombreCiudad):
     polideportivo = Polideportivo.objects.select_related('idUsuario', 'idDireccion').filter(idUsuario = idAdmin, idDireccion__ciudad=nombreCiudad)
     return render(requets, 'polideportivo.html', {'polideportivo': polideportivo})
 
-"""
-def polideportivo(request, idAdmin, nombreCiudad):
-    polideportivo = Polideportivo.objects.raw(
-        "SELECT * FROM Polideportivo WHERE idUsuario_id = %s AND idDireccion_id IN (SELECT idDireccion FROM Direccion WHERE ciudad = %s)",
-        [idAdmin, nombreCiudad]
-    )
-    return render(request, 'polideportivo.html', {'polideportivo': polideportivo})
+    #Pistas filtradas por tipo y estado
+def pistasFiltradas(request, nuevoTipo ,nuevoEstado):
+    pistas = Pista.objects.filter(tipo=nuevoTipo,estado=nuevoEstado)
+    return render(request,'pistasFiltradas.html', {'pistas':pistas})
 
+
+"""
+    def pistasFiltradas(request, nuevoTipo, nuevoEstado):
+    pistas = Pista.objects.raw(
+        "SELECT * FROM Pista WHERE tipo = %s AND estado = %s",
+        [nuevoTipo, nuevoEstado]
+    )
+    return render(request, 'pistasFiltradas.html', {'pistas': pistas})
 """
 
 def mi_error_400(request,exception=None):

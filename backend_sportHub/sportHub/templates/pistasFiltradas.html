@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pistas filtradas</title>
+</head>
+<body>
+    <h1>Pistas filtradas</h1>
+
+    {% if pistas %}
+        <table border="1" cellpadding="6">
+            <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Tipo</th>
+                    <th>Estado</th>
+                    <th>Metros</th>
+                    <th>Precio/hora</th>
+                    <th>Polideportivo</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for pista in pistas %}
+                    <tr>
+                        <td>{{ pista.idPista }}</td>
+                        <td>{{ pista.tipo }}</td>
+                        <td>{{ pista.get_estado_display }}</td>
+                        <td>{{ pista.metro }}</td>
+                        <td>{{ pista.precioHora }} €</td>
+                        <td>{{ pista.idPolideportivo.nombre }}</td>
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    {% else %}
+        <p>No hay pistas que coincidan con ese tipo y estado.</p>
+    {% endif %}
+
+    <p><a href="{% url 'index' %}">Volver al inicio</a></p>
+</body>
+</html>
