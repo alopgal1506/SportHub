@@ -33,6 +33,21 @@ def polideportivo(requets, idAdmin, nombreCiudad):
     polideportivo = Polideportivo.objects.select_related('idUsuario', 'idDireccion').filter(idUsuario = idAdmin, idDireccion__ciudad=nombreCiudad)
     return render(requets, 'polideportivo.html', {'polideportivo': polideportivo})
 
+"""
+def polideportivo(request, idAdmin, nombreCiudad):
+    polideportivo = Polideportivo.objects.raw(
+        "SELECT poli.*, admin.cargo, admin.nivelAcceso, usuario.nombreUsuario, "
+        "direccion.ciudad, direccion.calleNumero, direccion.codigoPostal "
+        "FROM sportHub_polideportivo poli "
+        "INNER JOIN sportHub_administrador admin ON poli.idUsuario_id = admin.usuario_ptr_id "
+        "INNER JOIN sportHub_usuario usuario ON admin.usuario_ptr_id = usuario.idUsuario "
+        "INNER JOIN sportHub_direccion direccion ON poli.idDireccion_id = direccion.idDireccion "
+        "WHERE poli.idUsuario_id = %s AND direccion.ciudad = %s",
+        [idAdmin, nombreCiudad]
+    )
+    return render(request, 'polideportivo.html', {'polideportivo': polideportivo})
+"""
+
     #Pistas filtradas por tipo y estado
 def pistasFiltradas(request, nuevoTipo ,nuevoEstado):
     pistas = Pista.objects.filter(tipo=nuevoTipo,estado=nuevoEstado)
