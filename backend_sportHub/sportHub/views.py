@@ -3,8 +3,11 @@ from django.db.models import Avg, Max, Min, Count
 from django.views.defaults import page_not_found
 from django.core.exceptions import PermissionDenied, SuspiciousOperation
 from django.http import Http404
-from .models import Pista, Polideportivo, Usuario, Administrador, Direccion
+from .models import Pista, Polideportivo, Usuario, Administrador, Direccion, Incidencia
 from django.db.models import Q
+from django.db.models import Prefetch
+
+
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
@@ -81,6 +84,19 @@ def pistasConIncidencias(request, texto):
     )
     return render(request, 'pistasConIncidencias.html', {'incidencia': incidencia, 'texto': texto})
 """
+    # Incidencia en un año en concreto
+def incidenciasPorAno(request, ano):
+    incidencias = Incidencia.objects.filter(fecha__year=ano).prefetch_related(Prefetch('pistas', queryset=Pista.objects.select_related('idPolideportivo', 'idSistema_Control', 'idUsuario'))).order_by('-fecha')
+    return render(request, 'incidenciasPorAno.html', {'incidencias': incidencias,'ano': ano})
+"""
+    def incidenciasPorAno(request, ano):
+    incidencias = Incidencia.objects.raw(
+        "SELECT * FROM Incidencia WHERE YEAR(fecha) = %s ORDER BY fecha DESC",
+        [ano]
+    )
+    return render(request, 'incidenciasPorAno.html', {'incidencias': incidencias, 'ano': ano})
+    
+"""
 
 def mi_error_400(request,exception=None):
     return render(request, 'errores/400.html',None,None,400)
@@ -109,5 +125,7 @@ def probar_404(request):
 def probar_500(request):
     resultado = 1 / 0  # Esto fuerza un error 500 
     return render(request, 'inicio.html')
+
+
 
 
