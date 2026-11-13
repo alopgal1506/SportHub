@@ -12,6 +12,7 @@ urlpatterns = [
    path('precios/', views.listaPrecios, name='listaPrecios'),
    path('incidencias/sin-resolver/', views.incidencias_sin_resolver, name='incidencias_sin_resolver'),
    path('notificaciones/<int:id>/', views.notificaciones_usuario, name='notificaciones_usuario'),
+   path('trabajadores/descuento/', views.trabajadores_descuento, name='trabajadores_descuento'),
    path('probar-400/', views.probar_400, name='probar_400'),
    path('probar-403/', views.probar_403, name='probar_403'),
    path('probar-404/', views.probar_404, name='probar_404'),

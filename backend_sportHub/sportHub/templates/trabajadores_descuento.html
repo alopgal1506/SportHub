@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Trabajadores con descuento</title>
+</head>
+<body>
+
+    <h1>Trabajadores con descuento inferior al 15%</h1>
+
+    {% if trabajadores %}
+        {% for trabajador in trabajadores %}
+            <h2>{{ trabajador.nombre }} {{ trabajador.apellidos }}</h2>
+
+            <p>Puesto: {{ trabajador.puesto }}</p>
+            <p>Descuento: {{ trabajador.descuento.porcentaje }}%</p>
+
+            <h3>Incidencias resueltas:</h3>
+
+            {% for incidencia in trabajador.incidencias_resueltas.all %}
+                <p>{{ incidencia.titulo }}</p>
+                <p>{{ incidencia.descripcion }}</p>
+                <p>Pista: {{ incidencia.num_pista }}</p>
+            {% empty %}
+                <p>Este trabajador no ha resuelto ninguna incidencia.</p>
+            {% endfor %}
+
+        {% endfor %}
+    {% else %}
+        <p>No hay trabajadores con descuentos inferiores al 15%.</p>
+    {% endif %}
+
+</body>
+</html>

@@ -3,7 +3,7 @@ from django.db.models import Avg, Max, Min, Count
 from django.views.defaults import page_not_found
 from django.core.exceptions import PermissionDenied, SuspiciousOperation
 from django.http import Http404
-from .models import Pista, Polideportivo, Notificacion,Usuario, Administrador, Direccion, Incidencia
+from .models import Pista, Polideportivo, Notificacion, Trabajador,Usuario, Administrador, Direccion, Incidencia
 from django.db.models import Q
 from django.db.models import Prefetch
 
@@ -156,6 +156,28 @@ def notificaciones_usuario(request, id):
         'notificaciones': notificaciones
     })
 """
+ # Trabajadores que tienen un descuento del 15 % y las incidencias que han ressuelto
+def trabajadores_descuento(request):
+    trabajadores = Trabajador.objects.filter(descuento__porcentaje__lt=15).prefetch_related('incidencias_resueltas')
+
+    return render(request, 'trabajadores_descuento.html', {
+        'trabajadores': trabajadores
+    })
+    
+"""
+    def trabajadores_descuento(request):
+    trabajadores = Trabajador.objects.raw(
+        "SELECT Usuario.* FROM Usuario "
+        "INNER JOIN Trabajador ON Usuario.idUsuario = Trabajador.usuario_ptr_id "
+        "INNER JOIN Descuento ON Trabajador.descuento_id = Descuento.idDescuento "
+        "WHERE Descuento.porcentaje < %s",
+        [15]
+    )
+
+    return render(request, 'trabajadores_descuento.html', {
+        'trabajadores': trabajadores
+    })
+"""
 
 def mi_error_400(request,exception=None):
     return render(request, 'errores/400.html',None,None,400)
@@ -184,6 +206,7 @@ def probar_404(request):
 def probar_500(request):
     resultado = 1 / 0  # Esto fuerza un error 500 
     return render(request, 'inicio.html')
+
 
 
 
