@@ -6,6 +6,7 @@ from django.db.models import Avg, Max, Min, Count
 def index(request):
     return render(request, 'index.html')
 
+    # Incidencias que ningun trabajdor ha resuelto
 def incidencias_sin_resolver(request):
     incidencias = Incidencia.objects.filter(resolutores__isnull=True)
 
