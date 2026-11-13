@@ -6,7 +6,7 @@ from django.db.models import Avg, Max, Min, Count
 def index(request):
     return render(request, 'index.html')
 
-
+    # Mostrar los trabajadores y las incidencias que han resuelto
 def trabajadores_incidencias(request):
     trabajadores = Trabajador.objects.prefetch_related('incidencias_resueltas')
 
