@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Incidencias sin resolver</title>
+</head>
+<body>
+
+    <h1>Incidencias que ningún trabajador ha resuelto</h1>
+
+    {% if incidencias %}
+        {% for incidencia in incidencias %}
+            <div>
+                <h3>{{ incidencia.titulo }}</h3>
+                <p>Descripción: {{ incidencia.descripcion }}</p>
+                <p>Número de pista: {{ incidencia.num_pista }}</p>
+                <p>Fecha: {{ incidencia.fecha }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>No hay incidencias pendientes de resolver.</p>
+    {% endif %}
+
+</body>
+</html>

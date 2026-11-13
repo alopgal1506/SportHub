@@ -116,6 +116,25 @@ def listaPrecios(request):
 """
 
 
+    # Incidencias que ningun trabajdor ha resuelto
+def incidencias_sin_resolver(request):
+    incidencias = Incidencia.objects.filter(resolutores__isnull=True)
+
+    return render(request, 'incidencias_sin_resolver.html', {
+        'incidencias': incidencias
+    })
+    
+"""
+    def incidencias_sin_resolver(request):
+    incidencias = Incidencia.objects.raw(
+        "SELECT * FROM Incidencia WHERE idIncidencia NOT IN (SELECT idIncidencia_id FROM Resuelve)"
+    )
+
+    return render(request, 'incidencias_sin_resolver.html', {
+        'incidencias': incidencias
+    })
+"""
+
 def mi_error_400(request,exception=None):
     return render(request, 'errores/400.html',None,None,400)
 
@@ -143,7 +162,6 @@ def probar_404(request):
 def probar_500(request):
     resultado = 1 / 0  # Esto fuerza un error 500 
     return render(request, 'inicio.html')
-
 
 
 
