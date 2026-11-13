@@ -10,10 +10,12 @@
     <nav>
         <ul>
             <li><a href="{% url 'pistasDisponibles' 8 'DISP' %}">Ver todas las pistas disponibles de un polideportivo</a></li>
+            <li><a href="{% url 'polideportivo' 11 'Segovia' %}">Mostrar todos los polideportivos que administra un administardor en una ciudad en concreto</a></li>        
             <li><a href="{% url 'probar_400' %}">Probar error 400</a></li>
             <li><a href="{% url 'probar_403' %}">Probar error 403</a></li>
             <li><a href="{% url 'probar_404' %}">Probar error 404</a></li>
             <li><a href="{% url 'probar_500' %}">Probar error 500</a></li>
+
         </ul>
     </nav>
 </body>
