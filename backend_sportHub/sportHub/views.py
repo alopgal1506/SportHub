@@ -156,7 +156,8 @@ def notificaciones_usuario(request, id):
         'notificaciones': notificaciones
     })
 """
- # Trabajadores que tienen un descuento del 15 % y las incidencias que han ressuelto
+ 
+    # Trabajadores que tienen un descuento del 15 % y las incidencias que han ressuelto
 def trabajadores_descuento(request):
     trabajadores = Trabajador.objects.filter(descuento__porcentaje__lt=15).prefetch_related('incidencias_resueltas')
 
@@ -177,6 +178,28 @@ def trabajadores_descuento(request):
     return render(request, 'trabajadores_descuento.html', {
         'trabajadores': trabajadores
     })
+"""
+
+    # Mostrar los trabajadores y las incidencias que han resuelto
+def trabajadores_incidencias(request):
+    trabajadores = Trabajador.objects.prefetch_related('incidencias_resueltas')
+
+    return render(request, 'trabajadores_incidencias.html', {
+        'trabajadores': trabajadores
+    })
+    
+"""
+def trabajadores_incidencias(request):
+    trabajadores = Trabajador.objects.raw(
+        "SELECT Usuario.* FROM Usuario "
+        "INNER JOIN Trabajador ON Usuario.idUsuario = Trabajador.usuario_ptr_id "
+        "INNER JOIN Resuelve ON Trabajador.usuario_ptr_id = Resuelve.idUsuario_id"
+    )
+
+    return render(request, 'trabajadores_incidencias.html', {
+        'trabajadores': trabajadores
+    })   
+
 """
 
 def mi_error_400(request,exception=None):
@@ -206,7 +229,3 @@ def probar_404(request):
 def probar_500(request):
     resultado = 1 / 0  # Esto fuerza un error 500 
     return render(request, 'inicio.html')
-
-
-
-
