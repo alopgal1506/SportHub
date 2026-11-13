@@ -139,3 +139,84 @@ python manage.py loaddata datos
 
 - Ramas: `main`, `Configuracion_inicial`, `Modelos` y `Backups`.
 - El `.gitignore` excluye lo innecesario: entorno virtual (`myvenv/`, `venv/`), `__pycache__/`, `*.pyc`, `db.sqlite3`, `.env`, `media/`, `staticfiles/`, `.vscode/`, `.idea/`.
+
+## 8. URLs de la aplicación
+
+Todas las URLs son accesibles desde el index (`/`). Los valores de los enlaces del index están elegidos para que existan en el fixture y muestren resultados.
+
+| Nº | URL | Vista | Qué hace |
+|---|---|---|---|
+| 1 | `pistas/disponibles/<int:idPoli>/<str:nuevoEstado>/` | `pistasDisponibles` | Muestra las pistas de un polideportivo con un estado concreto, con su polideportivo y su usuario |
+| 2 | `polideportivo/<int:idAdmin>/<str:nombreCiudad>/` | `polideportivo` | Muestra los polideportivos que administra un administrador en una ciudad, con administrador y dirección |
+| 3 | `pistas/<str:nuevoTipo>/<str:nuevoEstado>/` | `pistasFiltradas` | Muestra las pistas filtradas por tipo y estado |
+| 4 | `incidencia/<str:texto>/` | `pistasConIncidencias` | Muestra las pistas con alguna incidencia cuyo título o descripción contenga el texto |
+| 5 | `incidencias/ano/(\d{4})/` | `incidenciasPorAno` | Muestra las incidencias de un año, de más reciente a más antigua, con sus pistas |
+| 6 | `precios/` | `listaPrecios` | Muestra el precio medio, máximo y mínimo por hora y el total de pistas |
+| 7 | `incidencias/sin-resolver/` | `incidencias_sin_resolver` | Muestra las incidencias que ningún trabajador ha resuelto |
+| 8 | `notificaciones/<int:id>/` | `notificaciones_usuario` | Muestra las 5 últimas notificaciones de un usuario |
+| 9 | `trabajadores/descuento/` | `trabajadores_descuento` | Muestra los trabajadores con descuento inferior al 15 % y sus incidencias resueltas |
+| 10 | `trabajadores/incidencias/` | `trabajadores_incidencias` | Muestra los trabajadores y las incidencias que han resuelto |
+
+Cada vista tiene un comentario que explica qué hace y, debajo, la consulta equivalente en SQL comentada.
+
+## 9. Requisitos que cumple cada URL
+
+| Requisito | URL(s) donde se cumple |
+|---|---|
+| URL con `re_path` | 5 |
+| URL con dos parámetros | 1, 2, 3 |
+| URL con un parámetro entero | 8 (y el entero de 1 y 2) |
+| URL con un parámetro `str` | 4 (y el `str` de 1, 2 y 3) |
+| Filtro con AND | 1, 2, 3 |
+| Filtro con OR | 4 (`Q(...) \| Q(...)`) |
+| `aggregate` | 6 |
+| Relación reversa | 7 (`resolutores`), 8 (`destinatarios`), 5 (`pistas`) |
+| `order_by` | 5, 8 |
+| Límite (`[:5]`) | 8 |
+| Filtro con `None` en tabla intermedia | 7 (`resolutores__isnull=True`, tabla `Resuelve`) |
+| Datos de **ManyToOne** | 1 (Pista → Polideportivo y Usuario), 9 (Trabajador → Descuento) |
+| Datos de **OneToOne** | 2 (Polideportivo ↔ Administrador y Dirección), 5 (Pista ↔ Sistema_Control) |
+| Datos de **ManyToMany** | 4, 5 (Pista ↔ Incidencia), 8 (Usuario ↔ Notificación), 9 y 10 (Trabajador ↔ Incidencia con `Resuelve`) |
+| Consultas optimizadas | `select_related` (ManyToOne y OneToOne) y `prefetch_related` (ManyToMany) en las vistas que muestran modelos relacionados |
+| SQL comentado | Todas las vistas |
+
+## 10. Páginas de error personalizadas
+
+| Error | Plantilla | Handler en `configuracionSportHub/urls.py` |
+|---|---|---|
+| 400 | `templates/errores/400.html` | `handler400 = 'sportHub.views.mi_error_400'` |
+| 403 | `templates/errores/403.html` | `handler403 = 'sportHub.views.mi_error_403'` |
+| 404 | `templates/errores/404.html` | `handler404 = 'sportHub.views.mi_error_404'` |
+| 500 | `templates/errores/500.html` | `handler500 = 'sportHub.views.mi_error_500'` |
+
+Solo se muestran con `DEBUG = False` (modo producción). Para probarlas: `/pagina-que-no-existe/` (404). El 400, el 403 y el 500 se comprobaron con vistas temporales que lanzaban `SuspiciousOperation`, `PermissionDenied` y una división por cero, y se eliminaron después.
+
+## 11. Código que no se vio en clase
+
+- **`aggregate()`** (URL 6): calcula un valor resumen sobre toda la tabla en una sola consulta, sin agrupar. Devuelve un diccionario con claves `campo__funcion`, por ejemplo `precioHora__avg`. Se usan `Avg`, `Max`, `Min` y `Count`, que se importan de `django.db.models`.
+- **`Q()`** (URL 4): permite combinar condiciones con `|` (OR) y `&` (AND) en un `filter`. Sin `Q`, los filtros solo se pueden unir con AND.
+- **`.distinct()`** (URL 4): elimina filas repetidas. Al filtrar por una relación ManyToMany, una pista con varias incidencias coincidentes aparecería varias veces.
+- **`re_path`** (URL 5): define la URL con una expresión regular. `(\d{4})` exige exactamente 4 dígitos y los pasa a la vista como parámetro.
+- **`Prefetch()`** (URL 5): permite indicar qué consulta se usa en `prefetch_related`, aquí para traer las pistas ya con su polideportivo, su sistema de control y su usuario.
+- **`fecha__year`** (URL 5): filtra un campo de fecha por el año.
+- **`__isnull=True`** (URL 7): filtra por registros sin relación. Con la tabla intermedia `Resuelve`, devuelve las incidencias que no tienen ningún trabajador resolutor.
+- **`__lt`** (URL 9): "menor que", se usa para el descuento inferior al 15 %.
+- **`[:5]`** (URL 8): corta el resultado a 5 registros. Equivale a `LIMIT 5` en SQL.
+- **`raw()`** (solo en el SQL comentado): ejecuta una consulta SQL escrita a mano. Los `%s` son parámetros y el `%` literal se escribe `%%`.
+- **`strftime('%%Y', fecha)`** (SQL comentado de la URL 5): extrae el año en SQLite, que no tiene la función `YEAR()`.
+- **`handler400/403/404/500`**: variables de `urls.py` que indican qué vista se usa para cada error.
+
+## 12. Cómo lanzar el proyecto
+
+```
+git clone https://github.com/alopgal1506/SportHub.git
+cd SportHub/backend_sportHub
+python -m venv myvenv
+source myvenv/bin/activate
+pip install -r requirements.txt
+python manage.py migrate
+python manage.py loaddata datos
+python manage.py runserver
+```
+
+Después se abre `http://127.0.0.1:8000/`. El proyecto está en modo producción (`DEBUG = False`).
