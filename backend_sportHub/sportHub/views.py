@@ -6,6 +6,7 @@ from django.db.models import Avg, Max, Min, Count
 def index(request):
     return render(request, 'index.html')
 
+    # Precio AVG, MAX, MIN y el count de las pistas
 def listaPrecios(request):
     precio = Pista.objects.aggregate(Avg("precioHora"), Max("precioHora"), Min("precioHora"), Count("idPista"))
     media = precio["precioHora__avg"]
