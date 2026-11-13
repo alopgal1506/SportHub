@@ -6,6 +6,7 @@ from django.db.models import Avg, Max, Min, Count
 def index(request):
     return render(request, 'index.html')
 
+    # Trabajadores que tienen un descuento del 15 % y las incidencias que han ressuelto
 def trabajadores_descuento(request):
     trabajadores = Trabajador.objects.filter(descuento__porcentaje__lt=15).prefetch_related('incidencias_resueltas')
 
