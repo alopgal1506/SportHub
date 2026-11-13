@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Notificaciones del usuario</title>
+</head>
+<body>
+
+    <h1>Notificaciones del usuario</h1>
+
+    {% if notificaciones %}
+        {% for notificacion in notificaciones %}
+            <div>
+                <p>Tipo: {{ notificacion.get_tipo_display }}</p>
+                <p>Mensaje: {{ notificacion.mensaje }}</p>
+                <p>Fecha: {{ notificacion.fecha_envio }}</p>
+                <p>Leída: {{ notificacion.leida }}</p>
+            </div>
+        {% endfor %}
+    {% else %}
+        <p>Este usuario no tiene notificaciones.</p>
+    {% endif %}
+
+</body>
+</html>

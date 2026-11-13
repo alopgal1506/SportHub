@@ -3,7 +3,7 @@ from django.db.models import Avg, Max, Min, Count
 from django.views.defaults import page_not_found
 from django.core.exceptions import PermissionDenied, SuspiciousOperation
 from django.http import Http404
-from .models import Pista, Polideportivo, Usuario, Administrador, Direccion, Incidencia
+from .models import Pista, Polideportivo, Notificacion,Usuario, Administrador, Direccion, Incidencia
 from django.db.models import Q
 from django.db.models import Prefetch
 
@@ -134,6 +134,28 @@ def incidencias_sin_resolver(request):
         'incidencias': incidencias
     })
 """
+    # Notificaciones de un usuario ordenadas por fecha y solo salen los 5 primeros regisros
+def notificaciones_usuario(request, id):
+    notificaciones = Notificacion.objects.filter(destinatarios__idUsuario=id).order_by('-fecha_envio')[:5]
+    return render(request, 'notificaciones_usuario.html', {
+        'notificaciones': notificaciones
+    })
+   
+"""
+    def notificaciones_usuario(request, id):
+    notificaciones = Notificacion.objects.raw(
+        "SELECT Notificacion.* FROM Notificacion "
+        "INNER JOIN Usuario_notificaciones ON Notificacion.idNotificacion = Usuario_notificaciones.notificacion_id "
+        "WHERE Usuario_notificaciones.usuario_id = %s "
+        "ORDER BY fecha_envio DESC",
+        "LIMIT 5",
+        [id]
+    )
+
+    return render(request, 'notificaciones_usuario.html', {
+        'notificaciones': notificaciones
+    })
+"""
 
 def mi_error_400(request,exception=None):
     return render(request, 'errores/400.html',None,None,400)
@@ -162,7 +184,6 @@ def probar_404(request):
 def probar_500(request):
     resultado = 1 / 0  # Esto fuerza un error 500 
     return render(request, 'inicio.html')
-
 
 
 
