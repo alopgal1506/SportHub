@@ -24,7 +24,6 @@
                         <li>
                             <strong>Pista {{ pista.idPista }}</strong> - Tipo: {{ pista.tipo }} | Estado: {{ pista.get_estado_display }} | Metros: {{ pista.metro }} | Precio/hora: {{ pista.precioHora }}€
                             
-                            <!-- Información de los modelos relacionados -->
                             {% if pista.idPolideportivo %}
                                 <br>Polideportivo: {{ pista.idPolideportivo.nombre }}
                             {% endif %}
