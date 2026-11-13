@@ -9,6 +9,8 @@ def index(request):
 def pistasDisponibles(request, idPoli, nuevoEstado):
     pistas = Pista.objects.select_related("idPolideportivo").filter(idPolideportivo = idPoli, estado = nuevoEstado)
     return render(request,'pistasDisponibles.html',{'pistas':pistas})
+
+
 """
 def pistasDisponibles(request, idPoli, nuevoEstado):
     pistas = Pista.objects.raw(
