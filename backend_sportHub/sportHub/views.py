@@ -1,9 +1,10 @@
 from django.shortcuts import render
-from .models import Pista
+from .models import Pista, Polideportivo, Usuario, Administrador, Direccion
 
 # Create your views here.
 def index(request):
     return render(request, 'index.html')
+
     #Pistas filtradas por tipo y estado
 def pistasFiltradas(request, nuevoTipo ,nuevoEstado):
     pistas = Pista.objects.filter(tipo=nuevoTipo,estado=nuevoEstado)
