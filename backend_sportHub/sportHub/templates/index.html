@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+</head>
+<body>
+    <h1>Bienvenido a SportHub</h1>
+
+    <nav>
+        <ul>
+            <li><a href="{% url 'pistasDisponibles' 8 'DISP' %}">Ver todas las pistas disponibles de un polideportivo</a></li>
+            <li><a href="{% url 'polideportivo' 11 'Segovia' %}">Mostrar todos los polideportivos que administra un administardor en una ciudad en concreto</a></li>  
+            <li><a href="{% url 'pistasFiltradas' 'Tenis' 'DISP' %}">Pistas de pádel disponibles (filtradas por tipo y estado)</a></li>
+            <li><a href="{% url 'pistasConIncidencias' 'autoridades' %}">Pistas con incidencias "autoridades"</a></li>      
+            <li><a href="{% url 'incidenciasPorAno' 2026 %}">Incidencias del año 2026</a></li>
+            <li><a href="{% url 'listaPrecios' %}">Estadísticas de precios de las pistas</a></li>
+            <li><a href="{% url 'incidencias_sin_resolver' %}">Incidencias sin resolver</a></li>
+            <li><a href="{% url 'notificaciones_usuario' 1 %}">Notificaciones del usuario 1</a></li>        
+            <li><a href="{% url 'trabajadores_descuento' %}">Trabajadores con descuento inferior al 15%</a></li>
+            <li><a href="{% url 'trabajadores_incidencias' %}">Trabajadores e incidencias resueltas</a></li>
+            <li><a href="{% url 'probar_400' %}">Probar error 400</a></li>
+            <li><a href="{% url 'probar_403' %}">Probar error 403</a></li>
+            <li><a href="{% url 'probar_404' %}">Probar error 404</a></li>
+            <li><a href="{% url 'probar_500' %}">Probar error 500</a></li>
+        </ul>
+    </nav>
+</body>
+</html>
