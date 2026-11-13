@@ -5,6 +5,7 @@ from django.db.models import Q
 def index(request):
     return render(request, 'index.html')
 
+    # Incidencias cuyo titulo o descripcion contenga el texto con sus vistas
 def pistasConIncidencias(request, texto):
     incidencia = Pista.objects.prefetch_related('incidencias').filter(Q(incidencias__titulo__icontains=texto) | Q(incidencias__descripcion__icontains=texto) )
     return render(request, 'pistasConIncidencias.html', {'incidencia': incidencia, 'texto': texto})
