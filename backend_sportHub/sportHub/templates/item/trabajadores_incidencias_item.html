@@ -1,0 +1,11 @@
+<h2>{{ trabajador.nombre }} {{ trabajador.apellidos }}</h2>
+
+<p>Puesto: {{ trabajador.puesto }}</p>
+
+<h3>Incidencias resueltas:</h3>
+
+{% for incidencia in trabajador.incidencias_resueltas.all %}
+    {% include "item/trabajadores_incidencias_trabajador_item.html" %}
+{% empty %}
+    <p>Este trabajador no ha resuelto ninguna incidencia.</p>
+{% endfor %}

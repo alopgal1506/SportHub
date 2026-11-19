@@ -1,0 +1,12 @@
+<h2>{{ trabajador.nombre }} {{ trabajador.apellidos }}</h2>
+
+<p>Puesto: {{ trabajador.puesto }}</p>
+<p>Descuento: {{ trabajador.descuento.porcentaje }}%</p>
+
+<h3>Incidencias resueltas:</h3>
+
+{% for incidencia in trabajador.incidencias_resueltas.all %}
+    {% include "item/trabajadores_descuento_incidencia_item.html" %}
+{% empty %}
+    <p>Este trabajador no ha resuelto ninguna incidencia.</p>
+{% endfor %}

@@ -1,11 +1,9 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Error 500</title>
-</head>
-<body>
+{% extends "base.html" %}
+
+{% block cabecera %}
     <h1>Error 500: Error interno del servidor</h1>
+{% endblock %}
+
+{% block contenido %}
     <p>Algo salió mal en nuestro servidor. Estamos trabajando para solucionarlo.</p>
-</body>
-</html>
+{% endblock %}

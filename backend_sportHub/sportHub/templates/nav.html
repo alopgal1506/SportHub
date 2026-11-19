@@ -1,0 +1,18 @@
+<nav>
+    <ul>
+        <li><a href="{% url 'pistasDisponibles' 8 'DISP' %}">Ejercicio 1</a></li>
+        <li><a href="{% url 'polideportivo' 11 'Segovia' %}">Ejercicio 2</a></li>  
+        <li><a href="{% url 'pistasFiltradas' 'Tenis' 'DISP' %}">Ejercicio 3</a></li>
+        <li><a href="{% url 'pistasConIncidencias' 'autoridades' %}">Ejercicio 4</a></li>      
+        <li><a href="{% url 'incidenciasPorAno' 2026 %}">Ejercicio 5</a></li>
+        <li><a href="{% url 'listaPrecios' %}">Ejercicio 6</a></li>
+        <li><a href="{% url 'incidencias_sin_resolver' %}">Ejercicio 7</a></li>
+        <li><a href="{% url 'notificaciones_usuario' 1 %}">Ejercicio 8</a></li>        
+        <li><a href="{% url 'trabajadores_descuento' %}">Ejercicio 9</a></li>
+        <li><a href="{% url 'trabajadores_incidencias' %}">Ejercicio 10</a></li>
+        <li><a href="{% url 'probar_400' %}">Probar error 400</a></li>
+        <li><a href="{% url 'probar_403' %}">Probar error 403</a></li>
+        <li><a href="{% url 'probar_404' %}">Probar error 404</a></li>
+        <li><a href="{% url 'probar_500' %}">Probar error 500</a></li>
+    </ul>
+</nav>

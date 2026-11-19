@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Inicio</title>
+    <link rel="stylesheet" href="{% static 'css/estilos.css' %}">
+</head>
+<body>
+    {% include "nav.html" %}
+    <header>
+        <img src="{% static 'img/imagen.png' %}" alt="Imagen de bienvenida">
+        {% block cabecera %}
+        {% endblock %}
+    </header>
+    <main>
+        {% block contenido %}{% endblock %}
+    </main>
+    {% include "footer.html" %}
+    <script src="{% static 'js/script.js' %}" defer></script>
+</body>
+</html>

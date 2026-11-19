@@ -1,0 +1,15 @@
+<h3>Incidencia {{ incidencia.idIncidencia }}: {{ incidencia.titulo }}</h3>
+    <p><strong>Descripción:</strong> {{ incidencia.descripcion }}</p>
+    <p><strong>Número de pista:</strong> {{ incidencia.num_pista }}</p>
+    <p><strong>Fecha:</strong> {{ incidencia.fecha|date:"d/m/Y H:i" }}</p>
+    
+    <h4>Pistas relacionadas:</h4>
+    {% if incidencia.pistas.all %}
+        <ul>
+            {% for pista in incidencia.pistas.all %}
+                {% include "item/incidenciasPorAno_pista_item.html" %}
+            {% endfor %}
+        </ul>
+    {% else %}
+        <p><em>Esta incidencia no tiene pistas asociadas.</em></p>
+    {% endif %}

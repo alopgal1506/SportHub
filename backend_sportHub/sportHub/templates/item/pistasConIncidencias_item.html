@@ -1,0 +1,6 @@
+<h2>Pista {{ pista.idPista }}: {{ pista.tipo }} ({{ pista.get_estado_display }})</h2>
+<ul>
+    {% for inc in pista.incidencias.all %}
+        {% include "item/pistasConIncidencias_incidencias_item.html" %}
+    {% endfor %}
+</ul>

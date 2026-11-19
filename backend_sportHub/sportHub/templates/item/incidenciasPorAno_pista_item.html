@@ -1,0 +1,15 @@
+<li>
+    <strong>Pista {{ pista.idPista }}</strong> - Tipo: {{ pista.tipo }} | Estado: {{ pista.get_estado_display }} | Metros: {{ pista.metro }} | Precio/hora: {{ pista.precioHora }}€
+    
+    {% if pista.idPolideportivo %}
+        <br>Polideportivo: {{ pista.idPolideportivo.nombre }}
+    {% endif %}
+    
+    {% if pista.idSistema_Control %}
+        <br>Sistema de Control: {{ pista.idSistema_Control.modelo_fabricante }} (IP: {{ pista.idSistema_Control.direccion_IP }})
+    {% endif %}
+    
+    {% if pista.idUsuario %}
+        <br>Usuario: {{ pista.idUsuario.nombreUsuario }}
+    {% endif %}
+</li>

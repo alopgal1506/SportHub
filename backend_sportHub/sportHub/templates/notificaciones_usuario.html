@@ -1,25 +1,16 @@
-<!DOCTYPE html>
-<html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <title>Notificaciones del usuario</title>
-</head>
-<body>
+{% extends "base.html" %}
 
-    <h1>Notificaciones del usuario</h1>
+{% block cabecera %}
+     <h1>Notificaciones del usuario</h1>
+{% endblock %}
 
-    {% if notificaciones %}
+{% block contenido %}
+     {% if notificaciones %}
         {% for notificacion in notificaciones %}
-            <div>
-                <p>Tipo: {{ notificacion.get_tipo_display }}</p>
-                <p>Mensaje: {{ notificacion.mensaje }}</p>
-                <p>Fecha: {{ notificacion.fecha_envio }}</p>
-                <p>Leída: {{ notificacion.leida }}</p>
-            </div>
+            {% include "item/notificaciones_usuario_item.html" %}
         {% endfor %}
     {% else %}
         <p>Este usuario no tiene notificaciones.</p>
     {% endif %}
-
-</body>
-</html>
+    <a href="{% url 'index' %}">Volver al inicio</a>
+{% endblock %}
