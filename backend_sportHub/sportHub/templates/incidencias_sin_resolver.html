@@ -5,7 +5,7 @@
 {% endblock %}
 
 {% block contenido %}
-    {% if incidencias %}
+    {% if incidencias|length > 0 %}
         {% for incidencia in incidencias %}
             {% include "item/incidencias_sin_resolver_item.html" %}
         {% endfor %}

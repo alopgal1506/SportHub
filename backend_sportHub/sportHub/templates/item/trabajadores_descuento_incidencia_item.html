@@ -1,3 +1,4 @@
-<p>{{ incidencia.titulo }}</p>
-    <p>{{ incidencia.descripcion }}</p>
-    <p>Pista: {{ incidencia.num_pista }}</p>
+<p>{{ incidencia.titulo|capfirst }}</p>
+<p>{{ incidencia.descripcion }}</p>
+<p>Número de palabras {{incidencia.descripcion|wordcount}}</p>
+<p>Pista: {{ incidencia.num_pista }}</p>

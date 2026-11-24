@@ -5,16 +5,15 @@
 {% endblock %}
 
 {% block contenido %}
-    {% if incidencias %}
+    {% if incidencias|length == 0 %}
+        <p>No hay incidencias registradas para el año {{ ano }}.</p>
+    {% else %}
         <p>Total de incidencias encontradas: {{ incidencias|length }}</p>
         <hr>
 
         {% for incidencia in incidencias %}
             {% include "item/incidenciasPorAno_item.html" %}
         {% endfor %}
-
-    {% else %}
-        <p>No hay incidencias registradas para el año {{ ano }}.</p>
     {% endif %}
 
     <a href="{% url 'index' %}">Volver al inicio</a>

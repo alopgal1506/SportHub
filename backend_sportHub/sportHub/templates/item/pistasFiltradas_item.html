@@ -4,5 +4,5 @@
     <td>{{ pista.get_estado_display }}</td>
     <td>{{ pista.metro }}</td>
     <td>{{ pista.precioHora }} €</td>
-    <td>{{ pista.idPolideportivo.nombre }}</td>
+    <td>{{ pista.idPolideportivo.nombre|cut:"Polideportivo"  }}</td>
 </tr>

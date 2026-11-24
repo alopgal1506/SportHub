@@ -6,7 +6,7 @@
 
 {% block contenido %}
     <div>
-        <h2>Precio medio por hora: {{ media }}</h2>
+        <h2>Precio medio por hora: {{ media|floatformat:1 }}</h2>
         <h2>Precio máximo por hora: {{ maximo }}</h2>
         <h2>Precio mínimo por hora: {{ minimo }}</h2>
         <h2>Número total de pistas: {{ total }}</h2>

@@ -5,12 +5,12 @@
 {% endblock %}
 
 {% block contenido %}
-     {% if notificaciones %}
+    {% if not notificaciones %}
+        <p>Este usuario no tiene notificaciones.</p>
+    {% else %}
         {% for notificacion in notificaciones %}
             {% include "item/notificaciones_usuario_item.html" %}
         {% endfor %}
-    {% else %}
-        <p>Este usuario no tiene notificaciones.</p>
     {% endif %}
     <a href="{% url 'index' %}">Volver al inicio</a>
 {% endblock %}

@@ -1,6 +1,6 @@
 <div>
     <p>Tipo: {{ notificacion.get_tipo_display }}</p>
     <p>Mensaje: {{ notificacion.mensaje }}</p>
-    <p>Fecha: {{ notificacion.fecha_envio }}</p>
-    <p>Leída: {{ notificacion.leida }}</p>
+    <p>Fecha: {{ notificacion.fecha_envio|date:"d/m/Y H:i"  }}</p>
+    <p>Leída: {{ notificacion.leida|yesno:"Verdadero,Falso" }}</p>
 </div>

@@ -1,6 +1,6 @@
 <div>
     <h3>{{ incidencia.titulo }}</h3>
-    <p>Descripción: {{ incidencia.descripcion }}</p>
+    <p>Descripción: {{ incidencia.descripcion|truncatechars:60 }}</p>
     <p>Número de pista: {{ incidencia.num_pista }}</p>
-    <p>Fecha: {{ incidencia.fecha }}</p>
+    <p>Fecha: {{ incidencia.fecha|date:"d/m/Y H:i"  }}</p>
 </div>
