@@ -220,3 +220,50 @@ python manage.py runserver
 ```
 
 Después se abre `http://127.0.0.1:8000/`. El proyecto está en modo producción (`DEBUG = False`).
+
+Rutas relativas a `backend_sportHub/sportHub/templates/`.
+
+## 13. Template tags utilizados (mínimo 5)
+
+| Tag | Dónde se usa | Para qué |
+|---|---|---|
+| `{% if %} ... {% else %} ... {% endif %}` | `pistasDisponibles.html`, `pistasFiltradas.html`, `polideportivo.html`, `incidenciasPorAno.html`, `incidencias_sin_resolver.html`, `notificaciones_usuario.html`, `pistasConIncidencias.html`, `trabajadores_descuento.html`, `trabajadores_incidencias.html`, `item/pistasDisponibles_item.html`, `item/incidenciasPorAno_item.html` | Mostrar el listado o un mensaje si no hay resultados |
+| `{% for %} ... {% empty %} ... {% endfor %}` | `item/trabajadores_descuento_item.html`, `item/trabajadores_incidencias_item.html` | Recorrer las incidencias de un trabajador y avisar si no ha resuelto ninguna |
+| `{% extends %}` y `{% block %}` | `base.html` define los blocks `cabecera` y `contenido`; todas las páginas, incluidas las de `errores/`, hacen `{% extends "base.html" %}` | Herencia de plantillas |
+| `{% include %}` | `base.html` (incluye `nav.html` y `footer.html`); dentro de cada `for` se incluye su plantilla de la carpeta `item/` | Reutilizar plantillas |
+| `{% url %}` | `nav.html` y el enlace "Volver al inicio" de las páginas | Generar los enlaces a partir del `name` de `urls.py` |
+| `{% load static %}` y `{% static %}` | `base.html` | Cargar el CSS, el JavaScript y el logotipo |
+| `{% now %}` | `footer.html` (`{% now "Y" %}`) | Mostrar el año actual |
+
+## 14. Operadores utilizados en los `if` (mínimo 5)
+
+| Operador | Dónde se usa | Ejemplo |
+|---|---|---|
+| `==` | `incidenciasPorAno.html`; `item/pistasDisponibles_item.html` | `{% if incidencias\|length == 0 %}` / `{% if pista.estado == 'OCUP' ... %}` |
+| `!=` | `pistasConIncidencias.html` | `{% if incidencia\|length != 0 %}` |
+| `>` | `pistasDisponibles.html`; `incidencias_sin_resolver.html`; `item/pistasFiltradas_item.html` | `{% if pistas.count > 0 %}` |
+| `<` | `item/pistasDisponibles_item.html` | `{% if pista.precioHora < 10 %}` |
+| `>=` | `item/pistasFiltradas_item.html` | `{% if pista.metro >= 200 and pista.precioHora > 15 %}` |
+| `and` | `item/pistasFiltradas_item.html` | `{% if pista.metro >= 200 and pista.precioHora > 15 %}` |
+| `or` | `item/pistasDisponibles_item.html` | `{% if pista.estado == 'OCUP' or pista.estado == 'MANT' %}` |
+| `not` | `notificaciones_usuario.html`; `item/polideportivo_item.html` | `{% if not notificaciones %}` / `{% if not forloop.last %}` |
+| `in` | `item/notificaciones_usuario_item.html` | `{% if notificacion.tipo in "RESER REGIST" %}` |
+| `is not` | `item/pistasDisponibles_item.html` | `{% if pista.idUsuario is not None %}` |
+
+## 15. Template filters utilizados (mínimo 10)
+
+| Filtro | Dónde se usa | Ejemplo |
+|---|---|---|
+| `date` | `item/incidenciasPorAno_item.html`, `item/incidencias_sin_resolver_item.html`, `item/notificaciones_usuario_item.html`, `item/pistasConIncidencias_incidencias_item.html` (fecha y hora), `item/polideportivo_item.html`, `item/trabajadores_descuento_item.html`, `item/trabajadores_incidencias_item.html` (solo fecha) | `{{ notificacion.fecha_envio\|date:"d/m/Y H:i" }}` |
+| `time` | `item/polideportivo_item.html` | `{{ p.hora_apertura\|time:"H:i" }}` |
+| `floatformat` | `listaPrecios.html` | `{{ media\|floatformat:1 }}` |
+| `length` | `incidenciasPorAno.html`, `incidencias_sin_resolver.html`, `pistasConIncidencias.html`, `pistasDisponibles.html` | `{{ incidencias\|length }}` |
+| `pluralize` | `pistasDisponibles.html` | `pista{{ pistas\|length\|pluralize }}` |
+| `default` | `item/pistasDisponibles_item.html` | `{{ pista.idUsuario\|default:"—" }}` |
+| `upper` | `item/trabajadores_descuento_item.html` | `{{ trabajador.nombre\|upper }}` |
+| `lower` | `item/pistasDisponibles_item.html`, `item/polideportivo_item.html` | `{{ p.idUsuario.correoElectronico\|lower }}` |
+| `capfirst` | `item/trabajadores_descuento_incidencia_item.html` | `{{ incidencia.titulo\|capfirst }}` |
+| `truncatechars` | `item/incidencias_sin_resolver_item.html` | `{{ incidencia.descripcion\|truncatechars:60 }}` |
+| `wordcount` | `item/trabajadores_descuento_incidencia_item.html` | `{{ incidencia.descripcion\|wordcount }}` |
+| `cut` | `item/pistasFiltradas_item.html` | `{{ pista.idPolideportivo.nombre\|cut:"Polideportivo" }}` |
+| `yesno` | `item/notificaciones_usuario_item.html` | `{{ notificacion.leida\|yesno:"Verdadero,Falso" }}` |
